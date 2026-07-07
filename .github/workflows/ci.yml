@@ -30,13 +30,15 @@ jobs:
         run: |
           flake8 src tests --max-line-length=100 --extend-ignore=E402,E501,W391
 
+      - name: Prepare model artifacts for tests
+        run: |
+          python src/models/train_models.py
+          python src/models/tune_models.py
+          python src/models/package_model.py
+
       - name: Run unit tests
         run: |
           python -m pytest tests
-
-      - name: Run baseline model training
-        run: |
-          python src/models/train_models.py
 
       - name: Upload model training artifacts
         uses: actions/upload-artifact@v4
@@ -44,4 +46,8 @@ jobs:
           name: model-training-artifacts
           path: |
             artifacts/model_training
+            artifacts/model_tuning
+            artifacts/model_packaging
             models/baseline_best_model.joblib
+            models/tuned_best_model.joblib
+            models/final_heart_disease_model.joblib
