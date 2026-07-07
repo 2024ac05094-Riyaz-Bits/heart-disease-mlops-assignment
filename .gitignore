@@ -10,9 +10,9 @@ __pycache__/
 venv/
 env/
 
-artifacts/
-mlruns/
-models/
+/artifacts/
+/mlruns/
+/models/
 dist/
 build/
 
