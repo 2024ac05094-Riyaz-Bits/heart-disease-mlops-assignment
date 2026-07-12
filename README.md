@@ -1,6 +1,6 @@
 # Heart Disease MLOps Assignment
 
-This project builds an end-to-end MLOps pipeline for heart disease prediction using the UCI Heart Disease dataset. The workflow covers data understanding, cleaning, exploratory data analysis, feature engineering, model training, experiment tracking, packaging, API serving, CI/CD, and monitoring.
+This project implements an end-to-end MLOps workflow for heart disease prediction using the UCI Heart Disease dataset. The solution covers data preparation, exploratory analysis, model training, experiment tracking, packaging, API serving, CI/CD, monitoring, and deployment.
 
 ## Problem Statement
 
@@ -8,23 +8,23 @@ Build a machine learning classifier to predict the risk of heart disease from pa
 
 ## Project Structure
 
-- `data/raw/` - original downloaded dataset files
+- `data/raw/` - original dataset files
 - `data/processed/` - cleaned and prepared datasets
-- `src/data/` - dataset loading and understanding scripts
+- `src/data/` - dataset loading and inspection scripts
 - `src/features/` - cleaning, target preparation, preprocessing, and EDA scripts
-- `src/models/` - model training, tuning, tracking, and packaging scripts
-- `src/api/` - FastAPI prediction service and monitoring demo
-- `tests/` - unit tests for data pipeline and model packaging
+- `src/models/` - training, tuning, tracking, and packaging scripts
+- `src/api/` - FastAPI application and monitoring demo
+- `tests/` - unit tests
 - `.github/workflows/` - GitHub Actions CI pipeline
 - `k8s/` - Kubernetes deployment manifests and guide
-- `artifacts/` - generated plots, summaries, metrics, and screenshots
+- `artifacts/` - generated plots, summaries, logs, screenshots, and reports
 - `models/` - final packaged model and metadata
 
 ## Dataset
 
-This project uses the UCI Heart Disease dataset, specifically the processed Cleveland file.
+This project uses the processed Cleveland subset of the UCI Heart Disease dataset.
 
-Place the dataset file in:
+Required dataset file:
 
 - `data/raw/processed.cleveland.data`
 
@@ -43,7 +43,7 @@ pip install -r requirements.txt
 
 ## Execution Order
 
-Run the project scripts in this order:
+Run the main project workflow in this order:
 
 ```powershell
 python src\data\data_understanding.py
@@ -83,59 +83,55 @@ Run the API locally:
 uvicorn src.api.main:app --reload
 ```
 
-Open the API docs:
-
-- `http://127.0.0.1:8000/docs`
-
-Available endpoints:
+Local API endpoints:
 
 - `GET /`
 - `GET /health`
 - `GET /metrics`
 - `POST /predict`
 
-## Local Testing Instructions
-
-This project is being submitted with local API access instructions instead of a public cloud URL.
-
-Use the following steps on the local machine:
-
-1. Open PowerShell in the project root folder.
-2. Install dependencies if not already installed:
-
-```powershell
-pip install -r requirements.txt
-```
-
-3. Start the API:
-
-```powershell
-uvicorn src.api.main:app --reload
-```
-
-4. Open the Swagger UI:
+Local Swagger UI:
 
 - `http://127.0.0.1:8000/docs`
 
-5. Test the prediction endpoint:
+## Public Deployment
 
-- expand `POST /predict`
-- click `Try it out`
-- use the sample JSON request
-- click `Execute`
+The API is publicly deployed on Render.
 
-6. Confirm that a JSON response with `prediction` and `confidence` is returned.
+Public deployed URL:
 
-## Docker
+- `https://heart-disease-api-lo3h.onrender.com`
 
-Docker support is included through the `Dockerfile`.
+Public endpoints:
 
-Build and run when Docker is available:
+- Swagger UI: `https://heart-disease-api-lo3h.onrender.com/docs`
+- Health endpoint: `https://heart-disease-api-lo3h.onrender.com/health`
+- Predict endpoint: `https://heart-disease-api-lo3h.onrender.com/predict`
 
-```powershell
-docker build -t heart-disease-api .
-docker run -p 8000:8000 heart-disease-api
-```
+## API Testing
+
+To test the API locally or on the public deployment:
+
+1. Open the Swagger UI.
+2. Expand `POST /predict`.
+3. Click `Try it out`.
+4. Use the sample JSON request.
+5. Click `Execute`.
+6. Confirm that the response returns `prediction` and `confidence`.
+
+## Docker and Containerization
+
+The project includes containerization support through the repository configuration.
+
+The intended setup packages:
+
+- Python runtime
+- project dependencies
+- FastAPI application
+- saved model artifacts
+- startup configuration
+
+During development, full local container execution could not be completed on the office laptop because Docker-based tooling required additional platform components and administrator-level installation support. Because of this setup limitation, the container configuration was prepared in the repository, while the final working deployment was completed through Render using the cloud build process.
 
 ## CI/CD
 
@@ -143,31 +139,31 @@ GitHub Actions workflow file:
 
 - `.github/workflows/ci.yml`
 
-The pipeline performs:
+The CI pipeline performs:
 
 - dependency installation
 - linting with `flake8`
 - unit testing with `pytest`
-- model training script execution
+- model training and packaging validation
 
 ## Kubernetes Deployment
 
-Deployment files are available in:
+Prepared deployment files:
 
 - `k8s/heart-disease-deployment.yaml`
 - `k8s/heart-disease-service.yaml`
 - `k8s/deployment_guide.md`
 
-These manifests are prepared for deployment, but actual Kubernetes execution depends on Docker and `kubectl` availability on the machine.
+These files are included as deployment-ready manifests for Kubernetes-based deployment.
 
 ## Key Results
 
 - Final dataset size: `303` rows
-- Final modeling target: binary `target`
+- Final target: binary `target`
 - Best model: `logistic_regression_tuned`
 - Test ROC-AUC: `0.966`
 - Test Recall: `0.929`
-- Test F1: `0.881`
+- Test F1-score: `0.881`
 
 ## Important Artifacts
 
@@ -177,15 +173,11 @@ These manifests are prepared for deployment, but actual Kubernetes execution dep
 - Experiment summary: `artifacts/experiment_tracking/experiment_summary.md`
 - Packaging summary: `artifacts/model_packaging/packaging_summary.md`
 - Monitoring summary: `artifacts/monitoring/monitoring_summary.md`
-- API screenshots: `artifacts/screenshots/`
-
-## API Access Note
-
-Public deployment was not used for this submission. The API can be tested locally with:
-
-- `http://127.0.0.1:8000/docs`
-- `http://127.0.0.1:8000/predict`
+- Screenshots: `artifacts/screenshots/`
+- Final report: `artifacts/report/`
 
 ## Repository Link
 
-Add your GitHub repository link here before final submission.
+GitHub repository:
+
+- `https://github.com/2024ac05094-Riyaz-Bits/heart-disease-mlops-assignment`
