@@ -613,3 +613,16 @@ Among the models tested, tuned Logistic Regression was selected as the final mod
 - test recall: 0.929
 
 Overall, the project shows how a machine learning model can be developed in a more reproducible and maintainable way, with clear separation between data processing, model logic, API serving, testing, and deployment preparation.
+
+
+
+## Final video link:
+`https://drive.google.com/drive/folders/13JVcgmtEHPi5-exeUhdflv6UjuE5xdGl?usp=sharing`
+
+
+## Deployment link:
+
+Swagger UI: `https://heart-disease-api-lo3h.onrender.com/docs`
+Health endpoint: `https://heart-disease-api-lo3h.onrender.com/health`
+Prediction endpoint: `https://heart-disease-api-lo3h.onrender.com/predict`
+
