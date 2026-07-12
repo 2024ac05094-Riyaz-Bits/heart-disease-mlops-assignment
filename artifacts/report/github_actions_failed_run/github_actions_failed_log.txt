@@ -1,0 +1,876 @@
+﻿2026-07-07T16:02:17.3865256Z Current runner version: '2.335.1'
+2026-07-07T16:02:17.3901139Z ##[group]Runner Image Provisioner
+2026-07-07T16:02:17.3902596Z Hosted Compute Agent
+2026-07-07T16:02:17.3903735Z Version: 20260624.560
+2026-07-07T16:02:17.3905040Z Commit: 925d229a51159bc391ae97e54a2dd1fe20af789d
+2026-07-07T16:02:17.3906754Z Build Date: 2026-06-24T18:26:47Z
+2026-07-07T16:02:17.3908034Z Worker ID: {daa6ab74-01f0-4f14-951c-e248a6878b1e}
+2026-07-07T16:02:17.3909480Z Azure Region: northcentralus
+2026-07-07T16:02:17.3910605Z ##[endgroup]
+2026-07-07T16:02:17.3913018Z ##[group]Operating System
+2026-07-07T16:02:17.3914338Z Ubuntu
+2026-07-07T16:02:17.3915202Z 24.04.4
+2026-07-07T16:02:17.3916485Z LTS
+2026-07-07T16:02:17.3917437Z ##[endgroup]
+2026-07-07T16:02:17.3918534Z ##[group]Runner Image
+2026-07-07T16:02:17.3919753Z Image: ubuntu-24.04
+2026-07-07T16:02:17.3920750Z Version: 20260628.225.1
+2026-07-07T16:02:17.3923030Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260628.225/images/ubuntu/Ubuntu2404-Readme.md
+2026-07-07T16:02:17.3926221Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260628.225
+2026-07-07T16:02:17.3928143Z ##[endgroup]
+2026-07-07T16:02:17.3930331Z ##[group]GITHUB_TOKEN Permissions
+2026-07-07T16:02:17.3933458Z Contents: read
+2026-07-07T16:02:17.3934451Z Metadata: read
+2026-07-07T16:02:17.3936392Z Packages: read
+2026-07-07T16:02:17.3937559Z ##[endgroup]
+2026-07-07T16:02:17.3940725Z Secret source: Actions
+2026-07-07T16:02:17.3942080Z Prepare workflow directory
+2026-07-07T16:02:17.4439112Z Prepare all required actions
+2026-07-07T16:02:17.4497076Z Getting action download info
+2026-07-07T16:02:17.6923299Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-07-07T16:02:17.7664039Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-07-07T16:02:17.8439521Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-07-07T16:02:18.0621185Z Complete job name: build-test-train
+2026-07-07T16:02:18.1372096Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-07T16:02:18.1381031Z ##[group]Run actions/checkout@v4
+2026-07-07T16:02:18.1381764Z with:
+2026-07-07T16:02:18.1382336Z   repository: 2024ac05094-Riyaz-Bits/heart-disease-mlops-assignment
+2026-07-07T16:02:18.1386392Z   token: ***
+2026-07-07T16:02:18.1386819Z   ssh-strict: true
+2026-07-07T16:02:18.1387246Z   ssh-user: git
+2026-07-07T16:02:18.1387677Z   persist-credentials: true
+2026-07-07T16:02:18.1388150Z   clean: true
+2026-07-07T16:02:18.1388576Z   sparse-checkout-cone-mode: true
+2026-07-07T16:02:18.1389078Z   fetch-depth: 1
+2026-07-07T16:02:18.1389496Z   fetch-tags: false
+2026-07-07T16:02:18.1389921Z   show-progress: true
+2026-07-07T16:02:18.1390407Z   lfs: false
+2026-07-07T16:02:18.1390800Z   submodules: false
+2026-07-07T16:02:18.1391237Z   set-safe-directory: true
+2026-07-07T16:02:18.1391982Z ##[endgroup]
+2026-07-07T16:02:18.2465553Z Syncing repository: 2024ac05094-Riyaz-Bits/heart-disease-mlops-assignment
+2026-07-07T16:02:18.2468637Z ##[group]Getting Git version info
+2026-07-07T16:02:18.2470238Z Working directory is '/home/runner/work/heart-disease-mlops-assignment/heart-disease-mlops-assignment'
+2026-07-07T16:02:18.2472313Z [command]/usr/bin/git version
+2026-07-07T16:02:18.3228191Z git version 2.54.0
+2026-07-07T16:02:18.3246811Z ##[endgroup]
+2026-07-07T16:02:18.3287268Z Temporarily overriding HOME='/home/runner/work/_temp/7d236b01-6d4a-45f3-ad4b-872cfd1b0959' before making global git config changes
+2026-07-07T16:02:18.3304871Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-07T16:02:18.3307101Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/heart-disease-mlops-assignment/heart-disease-mlops-assignment
+2026-07-07T16:02:18.3362369Z Deleting the contents of '/home/runner/work/heart-disease-mlops-assignment/heart-disease-mlops-assignment'
+2026-07-07T16:02:18.3370128Z ##[group]Initializing the repository
+2026-07-07T16:02:18.3376126Z [command]/usr/bin/git init /home/runner/work/heart-disease-mlops-assignment/heart-disease-mlops-assignment
+2026-07-07T16:02:18.3683171Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-07-07T16:02:18.3684595Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-07-07T16:02:18.3685856Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-07-07T16:02:18.3687309Z hint: call:
+2026-07-07T16:02:18.3688023Z hint:
+2026-07-07T16:02:18.3688854Z hint: 	git config --global init.defaultBranch <name>
+2026-07-07T16:02:18.3689861Z hint:
+2026-07-07T16:02:18.3690802Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-07-07T16:02:18.3692398Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-07-07T16:02:18.3693617Z hint:
+2026-07-07T16:02:18.3694280Z hint: 	git branch -m <name>
+2026-07-07T16:02:18.3695050Z hint:
+2026-07-07T16:02:18.3696212Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-07-07T16:02:18.3698201Z Initialized empty Git repository in /home/runner/work/heart-disease-mlops-assignment/heart-disease-mlops-assignment/.git/
+2026-07-07T16:02:18.3713104Z [command]/usr/bin/git remote add origin https://github.com/2024ac05094-Riyaz-Bits/heart-disease-mlops-assignment
+2026-07-07T16:02:18.4089873Z ##[endgroup]
+2026-07-07T16:02:18.4091758Z ##[group]Disabling automatic garbage collection
+2026-07-07T16:02:18.4093389Z [command]/usr/bin/git config --local gc.auto 0
+2026-07-07T16:02:18.4136838Z ##[endgroup]
+2026-07-07T16:02:18.4148665Z ##[group]Setting up auth
+2026-07-07T16:02:18.4149982Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-07T16:02:18.4203483Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-07T16:02:18.6717753Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-07T16:02:18.6752227Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-07T16:02:18.6975578Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-07T16:02:18.7011180Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-07T16:02:18.7237451Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-07-07T16:02:18.7275581Z ##[endgroup]
+2026-07-07T16:02:18.7285446Z ##[group]Fetching the repository
+2026-07-07T16:02:18.7287410Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +74d89e61152fc208a0c6fbcd34728c4d578ea8b2:refs/remotes/origin/main
+2026-07-07T16:02:19.1138507Z From https://github.com/2024ac05094-Riyaz-Bits/heart-disease-mlops-assignment
+2026-07-07T16:02:19.1141898Z  * [new ref]         74d89e61152fc208a0c6fbcd34728c4d578ea8b2 -> origin/main
+2026-07-07T16:02:19.1178056Z ##[endgroup]
+2026-07-07T16:02:19.1179892Z ##[group]Determining the checkout info
+2026-07-07T16:02:19.1181840Z ##[endgroup]
+2026-07-07T16:02:19.1183079Z [command]/usr/bin/git sparse-checkout disable
+2026-07-07T16:02:19.1233875Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-07-07T16:02:19.1267820Z ##[group]Checking out the ref
+2026-07-07T16:02:19.1271100Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-07-07T16:02:19.1347229Z Switched to a new branch 'main'
+2026-07-07T16:02:19.1350172Z branch 'main' set up to track 'origin/main'.
+2026-07-07T16:02:19.1359634Z ##[endgroup]
+2026-07-07T16:02:19.1405165Z [command]/usr/bin/git log -1 --format=%H
+2026-07-07T16:02:19.1434391Z 74d89e61152fc208a0c6fbcd34728c4d578ea8b2
+2026-07-07T16:02:19.1811067Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-07T16:02:19.1817212Z ##[group]Run actions/setup-python@v5
+2026-07-07T16:02:19.1818317Z with:
+2026-07-07T16:02:19.1819091Z   python-version: 3.11
+2026-07-07T16:02:19.1820020Z   check-latest: false
+2026-07-07T16:02:19.1829779Z   token: ***
+2026-07-07T16:02:19.1830654Z   update-environment: true
+2026-07-07T16:02:19.1831771Z   allow-prereleases: false
+2026-07-07T16:02:19.1832779Z   freethreaded: false
+2026-07-07T16:02:19.1833653Z ##[endgroup]
+2026-07-07T16:02:19.3421502Z ##[group]Installed versions
+2026-07-07T16:02:19.3522677Z (node:2264) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-07T16:02:19.3524720Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-07T16:02:19.3526384Z Successfully set up CPython (3.11.15)
+2026-07-07T16:02:19.3528082Z ##[endgroup]
+2026-07-07T16:02:19.3854535Z ##[group]Run python -m pip install --upgrade pip
+2026-07-07T16:02:19.3856278Z [36;1mpython -m pip install --upgrade pip[0m
+2026-07-07T16:02:19.3857532Z [36;1mpip install -r requirements.txt[0m
+2026-07-07T16:02:19.4086782Z shell: /usr/bin/bash -e {0}
+2026-07-07T16:02:19.4087811Z env:
+2026-07-07T16:02:19.4088518Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-07T16:02:19.4089478Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-07T16:02:19.4090449Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-07T16:02:19.4091541Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-07T16:02:19.4092443Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-07T16:02:19.4093335Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-07T16:02:19.4094109Z ##[endgroup]
+2026-07-07T16:02:20.4178491Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages (26.1.2)
+2026-07-07T16:02:21.3909825Z Collecting pandas (from -r requirements.txt (line 1))
+2026-07-07T16:02:21.4420546Z   Downloading pandas-3.0.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+2026-07-07T16:02:21.6557892Z Collecting numpy (from -r requirements.txt (line 2))
+2026-07-07T16:02:21.6594523Z   Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+2026-07-07T16:02:21.7789506Z Collecting matplotlib (from -r requirements.txt (line 3))
+2026-07-07T16:02:21.7827099Z   Downloading matplotlib-3.11.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+2026-07-07T16:02:21.8123051Z Collecting seaborn (from -r requirements.txt (line 4))
+2026-07-07T16:02:21.8161299Z   Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+2026-07-07T16:02:21.9012513Z Collecting scikit-learn (from -r requirements.txt (line 5))
+2026-07-07T16:02:21.9047940Z   Downloading scikit_learn-1.9.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+2026-07-07T16:02:21.9197802Z Collecting jupyter (from -r requirements.txt (line 6))
+2026-07-07T16:02:21.9231440Z   Downloading jupyter-1.1.1-py2.py3-none-any.whl.metadata (2.0 kB)
+2026-07-07T16:02:21.9538135Z Collecting notebook (from -r requirements.txt (line 7))
+2026-07-07T16:02:21.9587393Z   Downloading notebook-7.6.0-py3-none-any.whl.metadata (10 kB)
+2026-07-07T16:02:21.9893535Z Collecting mlflow (from -r requirements.txt (line 8))
+2026-07-07T16:02:21.9929302Z   Downloading mlflow-3.14.0-py3-none-any.whl.metadata (49 kB)
+2026-07-07T16:02:22.0419721Z Collecting fastapi (from -r requirements.txt (line 9))
+2026-07-07T16:02:22.0453004Z   Downloading fastapi-0.139.0-py3-none-any.whl.metadata (26 kB)
+2026-07-07T16:02:22.0770560Z Collecting uvicorn (from -r requirements.txt (line 10))
+2026-07-07T16:02:22.0804114Z   Downloading uvicorn-0.50.2-py3-none-any.whl.metadata (6.7 kB)
+2026-07-07T16:02:22.0994128Z Collecting joblib (from -r requirements.txt (line 11))
+2026-07-07T16:02:22.1027846Z   Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+2026-07-07T16:02:22.1330507Z Collecting pytest (from -r requirements.txt (line 12))
+2026-07-07T16:02:22.1368436Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+2026-07-07T16:02:22.1856744Z Collecting black (from -r requirements.txt (line 13))
+2026-07-07T16:02:22.1893600Z   Downloading black-26.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (95 kB)
+2026-07-07T16:02:22.2134449Z Collecting flake8 (from -r requirements.txt (line 14))
+2026-07-07T16:02:22.2166259Z   Downloading flake8-7.3.0-py2.py3-none-any.whl.metadata (3.8 kB)
+2026-07-07T16:02:22.2314923Z Collecting python-dateutil>=2.8.2 (from pandas->-r requirements.txt (line 1))
+2026-07-07T16:02:22.2347755Z   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+2026-07-07T16:02:22.2907939Z Collecting contourpy>=1.0.1 (from matplotlib->-r requirements.txt (line 3))
+2026-07-07T16:02:22.2943858Z   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+2026-07-07T16:02:22.3070628Z Collecting cycler>=0.10 (from matplotlib->-r requirements.txt (line 3))
+2026-07-07T16:02:22.3104734Z   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+2026-07-07T16:02:22.4653138Z Collecting fonttools>=4.22.0 (from matplotlib->-r requirements.txt (line 3))
+2026-07-07T16:02:22.4689687Z   Downloading fonttools-4.63.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (118 kB)
+2026-07-07T16:02:22.5329754Z Collecting kiwisolver>=1.3.1 (from matplotlib->-r requirements.txt (line 3))
+2026-07-07T16:02:22.5365076Z   Downloading kiwisolver-1.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.1 kB)
+2026-07-07T16:02:22.5536818Z Collecting packaging>=20.0 (from matplotlib->-r requirements.txt (line 3))
+2026-07-07T16:02:22.5569906Z   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+2026-07-07T16:02:22.7060975Z Collecting pillow>=9 (from matplotlib->-r requirements.txt (line 3))
+2026-07-07T16:02:22.7097002Z   Downloading pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+2026-07-07T16:02:22.7334465Z Collecting pyparsing>=3 (from matplotlib->-r requirements.txt (line 3))
+2026-07-07T16:02:22.7367436Z   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+2026-07-07T16:02:22.8580419Z Collecting scipy>=1.10.0 (from scikit-learn->-r requirements.txt (line 5))
+2026-07-07T16:02:22.8619458Z   Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+2026-07-07T16:02:22.9027341Z Collecting narwhals>=2.0.1 (from scikit-learn->-r requirements.txt (line 5))
+2026-07-07T16:02:22.9062820Z   Downloading narwhals-2.23.0-py3-none-any.whl.metadata (15 kB)
+2026-07-07T16:02:22.9196655Z Collecting threadpoolctl>=3.5.0 (from scikit-learn->-r requirements.txt (line 5))
+2026-07-07T16:02:22.9230146Z   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+2026-07-07T16:02:22.9382221Z Collecting jupyter-console (from jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:22.9420279Z   Downloading jupyter_console-6.6.3-py3-none-any.whl.metadata (5.8 kB)
+2026-07-07T16:02:22.9639801Z Collecting nbconvert (from jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:22.9673205Z   Downloading nbconvert-7.17.1-py3-none-any.whl.metadata (8.4 kB)
+2026-07-07T16:02:23.0169303Z Collecting ipykernel (from jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:23.0203183Z   Downloading ipykernel-7.3.0-py3-none-any.whl.metadata (4.5 kB)
+2026-07-07T16:02:23.0455217Z Collecting ipywidgets (from jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:23.0487459Z   Downloading ipywidgets-8.1.8-py3-none-any.whl.metadata (2.4 kB)
+2026-07-07T16:02:23.1202392Z Collecting jupyterlab (from jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:23.1243615Z   Downloading jupyterlab-4.6.1-py3-none-any.whl.metadata (16 kB)
+2026-07-07T16:02:23.1399661Z Collecting jupyter-builder<2,>=1.0.2 (from notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.1483971Z   Downloading jupyter_builder-1.0.2-py3-none-any.whl.metadata (7.7 kB)
+2026-07-07T16:02:23.1741275Z Collecting jupyter-server<3,>=2.19.0 (from notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.1804001Z   Downloading jupyter_server-2.20.0-py3-none-any.whl.metadata (8.5 kB)
+2026-07-07T16:02:23.2028049Z Collecting jupyterlab-server<3,>=2.28.0 (from notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.2061237Z   Downloading jupyterlab_server-2.28.0-py3-none-any.whl.metadata (5.9 kB)
+2026-07-07T16:02:23.2237448Z Collecting notebook-shim<0.3,>=0.2 (from notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.2269491Z   Downloading notebook_shim-0.2.4-py3-none-any.whl.metadata (4.0 kB)
+2026-07-07T16:02:23.2593000Z Collecting tornado>=6.2.0 (from notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.2627245Z   Downloading tornado-6.5.7-cp39-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (2.8 kB)
+2026-07-07T16:02:23.2800695Z Collecting jupyter-core (from jupyter-builder<2,>=1.0.2->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.2833201Z   Downloading jupyter_core-5.9.1-py3-none-any.whl.metadata (1.5 kB)
+2026-07-07T16:02:23.2988815Z Collecting traitlets (from jupyter-builder<2,>=1.0.2->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.3022016Z   Downloading traitlets-5.15.1-py3-none-any.whl.metadata (10 kB)
+2026-07-07T16:02:23.3214166Z Collecting anyio>=3.1.0 (from jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.3245718Z   Downloading anyio-4.14.1-py3-none-any.whl.metadata (4.6 kB)
+2026-07-07T16:02:23.3440575Z Collecting argon2-cffi>=21.1 (from jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.3473147Z   Downloading argon2_cffi-25.1.0-py3-none-any.whl.metadata (4.1 kB)
+2026-07-07T16:02:23.3610959Z Collecting jinja2>=3.0.3 (from jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.3644342Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-07-07T16:02:23.3836165Z Collecting jupyter-client>=7.4.4 (from jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.3871639Z   Downloading jupyter_client-8.9.1-py3-none-any.whl.metadata (8.5 kB)
+2026-07-07T16:02:23.4022280Z Collecting jupyter-events>=0.11.0 (from jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.4054491Z   Downloading jupyter_events-0.12.1-py3-none-any.whl.metadata (5.8 kB)
+2026-07-07T16:02:23.4185383Z Collecting jupyter-server-terminals>=0.4.4 (from jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.4218248Z   Downloading jupyter_server_terminals-0.5.4-py3-none-any.whl.metadata (5.9 kB)
+2026-07-07T16:02:23.4383256Z Collecting nbformat>=5.3.0 (from jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.4416074Z   Downloading nbformat-5.10.4-py3-none-any.whl.metadata (3.6 kB)
+2026-07-07T16:02:23.4546960Z Collecting overrides>=5.0 (from jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.4579670Z   Downloading overrides-7.7.0-py3-none-any.whl.metadata (5.8 kB)
+2026-07-07T16:02:23.4732467Z Collecting prometheus-client>=0.9 (from jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.4765957Z   Downloading prometheus_client-0.25.0-py3-none-any.whl.metadata (2.1 kB)
+2026-07-07T16:02:23.7080304Z Collecting pyzmq>=24 (from jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.7115397Z   Downloading pyzmq-27.1.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (6.0 kB)
+2026-07-07T16:02:23.7231170Z Collecting send2trash>=1.8.2 (from jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.7263092Z   Downloading send2trash-2.1.0-py3-none-any.whl.metadata (4.1 kB)
+2026-07-07T16:02:23.7394366Z Collecting terminado>=0.8.3 (from jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.7426409Z   Downloading terminado-0.18.1-py3-none-any.whl.metadata (5.8 kB)
+2026-07-07T16:02:23.7586062Z Collecting websocket-client>=1.7 (from jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.7618006Z   Downloading websocket_client-1.9.0-py3-none-any.whl.metadata (8.3 kB)
+2026-07-07T16:02:23.7751944Z Collecting async-lru>=1.0.0 (from jupyterlab->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:23.7783174Z   Downloading async_lru-2.3.0-py3-none-any.whl.metadata (7.6 kB)
+2026-07-07T16:02:23.7941121Z Collecting httpx<1,>=0.25.0 (from jupyterlab->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:23.7973651Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2026-07-07T16:02:23.8150008Z Collecting jupyter-lsp>=2.0.0 (from jupyterlab->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:23.8184833Z   Downloading jupyter_lsp-2.3.1-py3-none-any.whl.metadata (1.8 kB)
+2026-07-07T16:02:23.8376702Z Collecting certifi (from httpx<1,>=0.25.0->jupyterlab->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:23.8410852Z   Downloading certifi-2026.6.17-py3-none-any.whl.metadata (2.5 kB)
+2026-07-07T16:02:23.8551699Z Collecting httpcore==1.* (from httpx<1,>=0.25.0->jupyterlab->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:23.8597896Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-07-07T16:02:23.8752615Z Collecting idna (from httpx<1,>=0.25.0->jupyterlab->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:23.8785704Z   Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+2026-07-07T16:02:23.8900803Z Collecting h11>=0.16 (from httpcore==1.*->httpx<1,>=0.25.0->jupyterlab->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:23.8932994Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-07-07T16:02:23.9067653Z Collecting babel>=2.10 (from jupyterlab-server<3,>=2.28.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.9100513Z   Downloading babel-2.18.0-py3-none-any.whl.metadata (2.2 kB)
+2026-07-07T16:02:23.9258210Z Collecting json5>=0.9.0 (from jupyterlab-server<3,>=2.28.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.9291576Z   Downloading json5-0.15.0-py3-none-any.whl.metadata (37 kB)
+2026-07-07T16:02:23.9509141Z Collecting jsonschema>=4.18.0 (from jupyterlab-server<3,>=2.28.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.9543170Z   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+2026-07-07T16:02:23.9764015Z Collecting requests>=2.31 (from jupyterlab-server<3,>=2.28.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:23.9795433Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-07-07T16:02:24.0043464Z Collecting mlflow-skinny==3.14.0 (from mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:24.0081007Z   Downloading mlflow_skinny-3.14.0-py3-none-any.whl.metadata (50 kB)
+2026-07-07T16:02:24.0262525Z Collecting mlflow-tracing==3.14.0 (from mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:24.0294343Z   Downloading mlflow_tracing-3.14.0-py3-none-any.whl.metadata (19 kB)
+2026-07-07T16:02:24.0477117Z Collecting Flask-CORS<7 (from mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:24.0508511Z   Downloading flask_cors-6.0.5-py3-none-any.whl.metadata (5.4 kB)
+2026-07-07T16:02:24.0658476Z Collecting Flask<4 (from mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:24.0690117Z   Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+2026-07-07T16:02:24.5408202Z Collecting aiohttp<4,>=3.7.0 (from mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:24.5450333Z   Downloading aiohttp-3.14.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+2026-07-07T16:02:24.5664804Z Collecting alembic!=1.10.0,<2 (from mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:24.5698561Z   Downloading alembic-1.18.5-py3-none-any.whl.metadata (7.2 kB)
+2026-07-07T16:02:24.7249543Z Collecting cryptography<49,>=43.0.0 (from mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:24.7292580Z   Downloading cryptography-48.0.1-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.3 kB)
+2026-07-07T16:02:24.7489867Z Collecting docker<8,>=4.0.0 (from mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:24.7524086Z   Downloading docker-7.1.0-py3-none-any.whl.metadata (3.8 kB)
+2026-07-07T16:02:24.7695962Z Collecting graphene<4 (from mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:24.7728783Z   Downloading graphene-3.4.3-py2.py3-none-any.whl.metadata (6.9 kB)
+2026-07-07T16:02:24.8009879Z Collecting gunicorn<27 (from mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:24.8043544Z   Downloading gunicorn-26.0.0-py3-none-any.whl.metadata (5.4 kB)
+2026-07-07T16:02:24.8196412Z Collecting huey<4,>=2.5.4 (from mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:24.8229828Z   Downloading huey-3.1.1-py3-none-any.whl.metadata (4.7 kB)
+2026-07-07T16:02:24.8329719Z Collecting pandas (from -r requirements.txt (line 1))
+2026-07-07T16:02:24.8363264Z   Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+2026-07-07T16:02:24.9706576Z Collecting pyarrow<25,>=4.0.0 (from mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:24.9741657Z   Downloading pyarrow-24.0.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+2026-07-07T16:02:24.9898472Z Collecting skops<1 (from mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:24.9941702Z   Downloading skops-0.14.0-py3-none-any.whl.metadata (4.4 kB)
+2026-07-07T16:02:25.2225469Z Collecting sqlalchemy<3,>=1.4.0 (from mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:25.2264244Z   Downloading sqlalchemy-2.0.51-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+2026-07-07T16:02:25.2484310Z Collecting cachetools<8,>=5.0.0 (from mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:25.2517726Z   Downloading cachetools-7.1.4-py3-none-any.whl.metadata (5.5 kB)
+2026-07-07T16:02:25.2666529Z Collecting click<9,>=7.0 (from mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:25.2704560Z   Downloading click-8.4.2-py3-none-any.whl.metadata (2.6 kB)
+2026-07-07T16:02:25.2851427Z Collecting cloudpickle<4 (from mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:25.2887020Z   Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+2026-07-07T16:02:25.3131663Z Collecting databricks-sdk<1,>=0.20.0 (from mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:25.3183116Z   Downloading databricks_sdk-0.120.0-py3-none-any.whl.metadata (43 kB)
+2026-07-07T16:02:25.3530444Z Collecting gitpython<4,>=3.1.9 (from mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:25.3563454Z   Downloading gitpython-3.1.50-py3-none-any.whl.metadata (14 kB)
+2026-07-07T16:02:25.3853305Z Collecting importlib_metadata!=4.7.0,<10,>=3.7.0 (from mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:25.3887128Z   Downloading importlib_metadata-9.0.0-py3-none-any.whl.metadata (4.5 kB)
+2026-07-07T16:02:25.4075782Z Collecting opentelemetry-api<3,>=1.9.0 (from mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:25.4109881Z   Downloading opentelemetry_api-1.43.0-py3-none-any.whl.metadata (1.4 kB)
+2026-07-07T16:02:25.4273353Z Collecting opentelemetry-proto<3,>=1.9.0 (from mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:25.4306518Z   Downloading opentelemetry_proto-1.43.0-py3-none-any.whl.metadata (2.3 kB)
+2026-07-07T16:02:25.4480275Z Collecting opentelemetry-sdk<3,>=1.9.0 (from mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:25.4512988Z   Downloading opentelemetry_sdk-1.43.0-py3-none-any.whl.metadata (1.7 kB)
+2026-07-07T16:02:25.6334087Z Collecting protobuf<8,>=3.12.0 (from mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:25.6369453Z   Downloading protobuf-7.35.1-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+2026-07-07T16:02:25.7302873Z Collecting pydantic<3,>=2.0.0 (from mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:25.7337696Z   Downloading pydantic-2.13.4-py3-none-any.whl.metadata (109 kB)
+2026-07-07T16:02:25.7538300Z Collecting python-dotenv<2,>=0.19.0 (from mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:25.7571137Z   Downloading python_dotenv-1.2.2-py3-none-any.whl.metadata (27 kB)
+2026-07-07T16:02:25.7916664Z Collecting pyyaml<7,>=5.1 (from mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:25.7951887Z   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-07-07T16:02:25.8083282Z Collecting sqlparse<1,>=0.4.0 (from mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:25.8114550Z   Downloading sqlparse-0.5.5-py3-none-any.whl.metadata (4.7 kB)
+2026-07-07T16:02:25.8467824Z Collecting starlette<2 (from mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:25.8500803Z   Downloading starlette-1.3.1-py3-none-any.whl.metadata (6.4 kB)
+2026-07-07T16:02:25.8660963Z Collecting typing-extensions<5,>=4.0.0 (from mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:25.8694835Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-07-07T16:02:25.9113967Z Collecting pytz>=2020.1 (from pandas->-r requirements.txt (line 1))
+2026-07-07T16:02:25.9146553Z   Downloading pytz-2026.2-py2.py3-none-any.whl.metadata (22 kB)
+2026-07-07T16:02:25.9288531Z Collecting tzdata>=2022.7 (from pandas->-r requirements.txt (line 1))
+2026-07-07T16:02:25.9322539Z   Downloading tzdata-2026.2-py2.py3-none-any.whl.metadata (1.4 kB)
+2026-07-07T16:02:25.9489134Z Collecting typing-inspection>=0.4.2 (from fastapi->-r requirements.txt (line 9))
+2026-07-07T16:02:25.9521733Z   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+2026-07-07T16:02:25.9615736Z Collecting annotated-doc>=0.0.2 (from fastapi->-r requirements.txt (line 9))
+2026-07-07T16:02:25.9648110Z   Downloading annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)
+2026-07-07T16:02:25.9805048Z Collecting aiohappyeyeballs>=2.5.0 (from aiohttp<4,>=3.7.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:25.9837668Z   Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+2026-07-07T16:02:25.9938895Z Collecting aiosignal>=1.4.0 (from aiohttp<4,>=3.7.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:25.9970312Z   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+2026-07-07T16:02:26.0103897Z Collecting attrs>=17.3.0 (from aiohttp<4,>=3.7.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:26.0135573Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+2026-07-07T16:02:26.0717288Z Collecting frozenlist>=1.1.1 (from aiohttp<4,>=3.7.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:26.0754390Z   Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+2026-07-07T16:02:26.3383866Z Collecting multidict<7.0,>=4.5 (from aiohttp<4,>=3.7.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:26.3420259Z   Downloading multidict-6.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+2026-07-07T16:02:26.4048196Z Collecting propcache>=0.2.0 (from aiohttp<4,>=3.7.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:26.4089209Z   Downloading propcache-0.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (16 kB)
+2026-07-07T16:02:26.6273446Z Collecting yarl<2.0,>=1.17.0 (from aiohttp<4,>=3.7.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:26.6310552Z   Downloading yarl-1.24.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (94 kB)
+2026-07-07T16:02:26.6596643Z Collecting Mako (from alembic!=1.10.0,<2->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:26.6629264Z   Downloading mako-1.3.12-py3-none-any.whl.metadata (2.9 kB)
+2026-07-07T16:02:26.7604343Z Collecting cffi>=2.0.0 (from cryptography<49,>=43.0.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:26.7639523Z   Downloading cffi-2.1.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+2026-07-07T16:02:26.7978468Z Collecting google-auth~=2.0 (from databricks-sdk<1,>=0.20.0->mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:26.8012972Z   Downloading google_auth-2.55.1-py3-none-any.whl.metadata (5.1 kB)
+2026-07-07T16:02:26.8142318Z Collecting protobuf<8,>=3.12.0 (from mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:26.8175336Z   Downloading protobuf-6.33.6-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+2026-07-07T16:02:26.8361099Z Collecting urllib3<3,>=1.26 (from databricks-sdk<1,>=0.20.0->mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:26.8394686Z   Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+2026-07-07T16:02:26.8542194Z Collecting blinker>=1.9.0 (from Flask<4->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:26.8576164Z   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+2026-07-07T16:02:26.8712377Z Collecting itsdangerous>=2.2.0 (from Flask<4->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:26.8745697Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+2026-07-07T16:02:26.9890522Z Collecting markupsafe>=2.1.1 (from Flask<4->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:26.9926640Z   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-07-07T16:02:27.0107766Z Collecting werkzeug>=3.1.0 (from Flask<4->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:27.0142123Z   Downloading werkzeug-3.1.8-py3-none-any.whl.metadata (4.0 kB)
+2026-07-07T16:02:27.0324277Z Collecting gitdb<5,>=4.0.1 (from gitpython<4,>=3.1.9->mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:27.0356491Z   Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+2026-07-07T16:02:27.0474239Z Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython<4,>=3.1.9->mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:27.0506351Z   Downloading smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+2026-07-07T16:02:27.0696053Z Collecting pyasn1-modules>=0.2.1 (from google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:27.0729122Z   Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+2026-07-07T16:02:27.0996485Z Collecting graphql-core<3.3,>=3.1 (from graphene<4->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:27.1030476Z   Downloading graphql_core-3.2.11-py3-none-any.whl.metadata (11 kB)
+2026-07-07T16:02:27.1156883Z Collecting graphql-relay<3.3,>=3.1 (from graphene<4->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:27.1192577Z   Downloading graphql_relay-3.2.0-py3-none-any.whl.metadata (12 kB)
+2026-07-07T16:02:27.1429788Z Collecting zipp>=3.20 (from importlib_metadata!=4.7.0,<10,>=3.7.0->mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:27.1462837Z   Downloading zipp-4.1.0-py3-none-any.whl.metadata (3.6 kB)
+2026-07-07T16:02:27.1747057Z Collecting opentelemetry-semantic-conventions==0.64b0 (from opentelemetry-sdk<3,>=1.9.0->mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:27.1783245Z   Downloading opentelemetry_semantic_conventions-0.64b0-py3-none-any.whl.metadata (2.4 kB)
+2026-07-07T16:02:27.1939765Z Collecting annotated-types>=0.6.0 (from pydantic<3,>=2.0.0->mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:27.1975300Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+2026-07-07T16:02:27.8580340Z Collecting pydantic-core==2.46.4 (from pydantic<3,>=2.0.0->mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:27.8618740Z   Downloading pydantic_core-2.46.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+2026-07-07T16:02:27.8795095Z Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r requirements.txt (line 1))
+2026-07-07T16:02:27.8828060Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-07-07T16:02:27.9739442Z Collecting charset_normalizer<4,>=2 (from requests>=2.31->jupyterlab-server<3,>=2.28.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:27.9776670Z   Downloading charset_normalizer-3.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (41 kB)
+2026-07-07T16:02:28.0037554Z Collecting prettytable>=3.9 (from skops<1->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:28.0070127Z   Downloading prettytable-3.18.0-py3-none-any.whl.metadata (37 kB)
+2026-07-07T16:02:28.1347517Z Collecting greenlet>=1 (from sqlalchemy<3,>=1.4.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:28.1383024Z   Downloading greenlet-3.5.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+2026-07-07T16:02:28.1675926Z Collecting iniconfig>=1.0.1 (from pytest->-r requirements.txt (line 12))
+2026-07-07T16:02:28.1714681Z   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+2026-07-07T16:02:28.1827198Z Collecting pluggy<2,>=1.5 (from pytest->-r requirements.txt (line 12))
+2026-07-07T16:02:28.1858425Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-07-07T16:02:28.2021741Z Collecting pygments>=2.7.2 (from pytest->-r requirements.txt (line 12))
+2026-07-07T16:02:28.2054710Z   Downloading pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+2026-07-07T16:02:28.2191834Z Collecting mypy-extensions>=0.4.3 (from black->-r requirements.txt (line 13))
+2026-07-07T16:02:28.2224074Z   Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+2026-07-07T16:02:28.2341542Z Collecting pathspec>=1.0.0 (from black->-r requirements.txt (line 13))
+2026-07-07T16:02:28.2373273Z   Downloading pathspec-1.1.1-py3-none-any.whl.metadata (14 kB)
+2026-07-07T16:02:28.2572360Z Collecting platformdirs>=2 (from black->-r requirements.txt (line 13))
+2026-07-07T16:02:28.2613001Z   Downloading platformdirs-4.10.0-py3-none-any.whl.metadata (5.5 kB)
+2026-07-07T16:02:28.2759145Z Collecting pytokens~=0.4.0 (from black->-r requirements.txt (line 13))
+2026-07-07T16:02:28.2791979Z   Downloading pytokens-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+2026-07-07T16:02:28.2917798Z Collecting mccabe<0.8.0,>=0.7.0 (from flake8->-r requirements.txt (line 14))
+2026-07-07T16:02:28.2949905Z   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+2026-07-07T16:02:28.3064233Z Collecting pycodestyle<2.15.0,>=2.14.0 (from flake8->-r requirements.txt (line 14))
+2026-07-07T16:02:28.3096174Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2026-07-07T16:02:28.3209401Z Collecting pyflakes<3.5.0,>=3.4.0 (from flake8->-r requirements.txt (line 14))
+2026-07-07T16:02:28.3241283Z   Downloading pyflakes-3.4.0-py2.py3-none-any.whl.metadata (3.5 kB)
+2026-07-07T16:02:28.3459885Z Collecting argon2-cffi-bindings (from argon2-cffi>=21.1->jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:28.3492494Z   Downloading argon2_cffi_bindings-25.1.0-cp39-abi3-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (7.4 kB)
+2026-07-07T16:02:28.3657063Z Collecting pycparser (from cffi>=2.0.0->cryptography<49,>=43.0.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:28.3690005Z   Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-07-07T16:02:28.3879953Z Collecting comm>=0.1.1 (from ipykernel->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:28.3914592Z   Downloading comm-0.2.3-py3-none-any.whl.metadata (3.7 kB)
+2026-07-07T16:02:28.4661072Z Collecting debugpy>=1.6.5 (from ipykernel->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:28.4698134Z   Downloading debugpy-1.8.21-cp311-cp311-manylinux_2_34_x86_64.whl.metadata (1.4 kB)
+2026-07-07T16:02:28.4998278Z Collecting ipython>=7.23.1 (from ipykernel->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:28.5032181Z   Downloading ipython-9.15.0-py3-none-any.whl.metadata (4.7 kB)
+2026-07-07T16:02:28.5193800Z Collecting matplotlib-inline>=0.1 (from ipykernel->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:28.5227343Z   Downloading matplotlib_inline-0.2.2-py3-none-any.whl.metadata (2.4 kB)
+2026-07-07T16:02:28.5329825Z Collecting nest-asyncio2>=1.7.0 (from ipykernel->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:28.5362394Z   Downloading nest_asyncio2-1.7.2-py3-none-any.whl.metadata (6.3 kB)
+2026-07-07T16:02:28.5981112Z Collecting psutil>=5.7 (from ipykernel->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:28.6017194Z   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+2026-07-07T16:02:28.6261217Z Collecting decorator>=5.1.0 (from ipython>=7.23.1->ipykernel->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:28.6293733Z   Downloading decorator-5.3.1-py3-none-any.whl.metadata (3.9 kB)
+2026-07-07T16:02:28.6393012Z Collecting ipython-pygments-lexers>=1.0.0 (from ipython>=7.23.1->ipykernel->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:28.6426096Z   Downloading ipython_pygments_lexers-1.1.1-py3-none-any.whl.metadata (1.1 kB)
+2026-07-07T16:02:28.6534232Z Collecting jedi>=0.18.2 (from ipython>=7.23.1->ipykernel->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:28.6567672Z   Downloading jedi-0.20.0-py2.py3-none-any.whl.metadata (23 kB)
+2026-07-07T16:02:28.6707877Z Collecting pexpect>4.6 (from ipython>=7.23.1->ipykernel->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:28.6747256Z   Downloading pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+2026-07-07T16:02:28.6975521Z Collecting prompt_toolkit<3.1.0,>=3.0.41 (from ipython>=7.23.1->ipykernel->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:28.7007703Z   Downloading prompt_toolkit-3.0.52-py3-none-any.whl.metadata (6.4 kB)
+2026-07-07T16:02:28.7129235Z Collecting stack_data>=0.6.0 (from ipython>=7.23.1->ipykernel->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:28.7164581Z   Downloading stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+2026-07-07T16:02:28.7455710Z Collecting wcwidth (from prompt_toolkit<3.1.0,>=3.0.41->ipython>=7.23.1->ipykernel->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:28.7491156Z   Downloading wcwidth-0.8.2-py3-none-any.whl.metadata (43 kB)
+2026-07-07T16:02:28.7677211Z Collecting parso<0.9.0,>=0.8.6 (from jedi>=0.18.2->ipython>=7.23.1->ipykernel->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:28.7710887Z   Downloading parso-0.8.7-py2.py3-none-any.whl.metadata (8.2 kB)
+2026-07-07T16:02:28.7891318Z Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.28.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:28.7923044Z   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+2026-07-07T16:02:28.8133303Z Collecting referencing>=0.28.4 (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.28.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:28.8165126Z   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+2026-07-07T16:02:29.1452797Z Collecting rpds-py>=0.25.0 (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.28.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:29.1489270Z   Downloading rpds_py-2026.6.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+2026-07-07T16:02:29.1732449Z Collecting python-json-logger>=2.0.4 (from jupyter-events>=0.11.0->jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:29.1764843Z   Downloading python_json_logger-4.1.0-py3-none-any.whl.metadata (3.7 kB)
+2026-07-07T16:02:29.1875713Z Collecting rfc3339-validator (from jupyter-events>=0.11.0->jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:29.1908991Z   Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl.metadata (1.5 kB)
+2026-07-07T16:02:29.2002530Z Collecting rfc3986-validator>=0.1.1 (from jupyter-events>=0.11.0->jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:29.2034794Z   Downloading rfc3986_validator-0.1.1-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-07-07T16:02:29.2174102Z Collecting fqdn (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:29.2206150Z   Downloading fqdn-1.5.1-py3-none-any.whl.metadata (1.4 kB)
+2026-07-07T16:02:29.2295251Z Collecting isoduration (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:29.2327836Z   Downloading isoduration-20.11.0-py3-none-any.whl.metadata (5.7 kB)
+2026-07-07T16:02:29.2464760Z Collecting jsonpointer>1.13 (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:29.2496934Z   Downloading jsonpointer-3.1.1-py3-none-any.whl.metadata (2.4 kB)
+2026-07-07T16:02:29.2596904Z Collecting rfc3987-syntax>=1.1.0 (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:29.2628654Z   Downloading rfc3987_syntax-1.1.0-py3-none-any.whl.metadata (7.7 kB)
+2026-07-07T16:02:29.2723670Z Collecting uri-template (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:29.2758128Z   Downloading uri_template-1.3.0-py3-none-any.whl.metadata (8.8 kB)
+2026-07-07T16:02:29.2900049Z Collecting webcolors>=24.6.0 (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:29.2934094Z   Downloading webcolors-25.10.0-py3-none-any.whl.metadata (2.2 kB)
+2026-07-07T16:02:29.3209197Z Collecting beautifulsoup4 (from nbconvert->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:29.3242375Z   Downloading beautifulsoup4-4.15.0-py3-none-any.whl.metadata (3.8 kB)
+2026-07-07T16:02:29.3386724Z Collecting bleach!=5.0.0 (from bleach[css]!=5.0.0->nbconvert->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:29.3420296Z   Downloading bleach-6.4.0-py3-none-any.whl.metadata (32 kB)
+2026-07-07T16:02:29.3545653Z Collecting defusedxml (from nbconvert->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:29.3578159Z   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+2026-07-07T16:02:29.3714500Z Collecting jupyterlab-pygments (from nbconvert->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:29.3748542Z   Downloading jupyterlab_pygments-0.3.0-py3-none-any.whl.metadata (4.4 kB)
+2026-07-07T16:02:29.3916785Z Collecting mistune<4,>=2.0.3 (from nbconvert->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:29.3949341Z   Downloading mistune-3.3.2-py3-none-any.whl.metadata (1.9 kB)
+2026-07-07T16:02:29.4088694Z Collecting nbclient>=0.5.0 (from nbconvert->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:29.4135810Z   Downloading nbclient-0.11.0-py3-none-any.whl.metadata (7.3 kB)
+2026-07-07T16:02:29.4278696Z Collecting pandocfilters>=1.4.1 (from nbconvert->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:29.4310648Z   Downloading pandocfilters-1.5.1-py2.py3-none-any.whl.metadata (9.0 kB)
+2026-07-07T16:02:29.4454947Z Collecting webencodings (from bleach!=5.0.0->bleach[css]!=5.0.0->nbconvert->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:29.4487748Z   Downloading webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+2026-07-07T16:02:29.4631106Z Collecting tinycss2>=1.1.0 (from bleach[css]!=5.0.0->nbconvert->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:29.4662715Z   Downloading tinycss2-1.5.1-py3-none-any.whl.metadata (3.0 kB)
+2026-07-07T16:02:29.4844497Z Collecting fastjsonschema>=2.15 (from nbformat>=5.3.0->jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:29.4879973Z   Downloading fastjsonschema-2.21.2-py3-none-any.whl.metadata (2.3 kB)
+2026-07-07T16:02:29.5066883Z Collecting ptyprocess>=0.5 (from pexpect>4.6->ipython>=7.23.1->ipykernel->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:29.5099090Z   Downloading ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+2026-07-07T16:02:29.5394063Z Collecting pyasn1<0.7.0,>=0.6.1 (from pyasn1-modules>=0.2.1->google-auth~=2.0->databricks-sdk<1,>=0.20.0->mlflow-skinny==3.14.0->mlflow->-r requirements.txt (line 8))
+2026-07-07T16:02:29.5445295Z   Downloading pyasn1-0.6.3-py3-none-any.whl.metadata (8.4 kB)
+2026-07-07T16:02:29.5700657Z Collecting lark>=1.2.2 (from rfc3987-syntax>=1.1.0->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:29.5732815Z   Downloading lark-1.3.1-py3-none-any.whl.metadata (1.8 kB)
+2026-07-07T16:02:29.5921632Z Collecting executing>=1.2.0 (from stack_data>=0.6.0->ipython>=7.23.1->ipykernel->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:29.5955114Z   Downloading executing-2.2.1-py2.py3-none-any.whl.metadata (8.9 kB)
+2026-07-07T16:02:29.6123738Z Collecting asttokens>=2.1.0 (from stack_data>=0.6.0->ipython>=7.23.1->ipykernel->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:29.6157223Z   Downloading asttokens-3.0.1-py3-none-any.whl.metadata (4.9 kB)
+2026-07-07T16:02:29.6262200Z Collecting pure-eval (from stack_data>=0.6.0->ipython>=7.23.1->ipykernel->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:29.6294513Z   Downloading pure_eval-0.2.3-py3-none-any.whl.metadata (6.3 kB)
+2026-07-07T16:02:29.6687375Z Collecting soupsieve>=1.6.1 (from beautifulsoup4->nbconvert->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:29.6720585Z   Downloading soupsieve-2.8.4-py3-none-any.whl.metadata (4.6 kB)
+2026-07-07T16:02:29.7100109Z Collecting widgetsnbextension~=4.0.14 (from ipywidgets->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:29.7133656Z   Downloading widgetsnbextension-4.0.15-py3-none-any.whl.metadata (1.6 kB)
+2026-07-07T16:02:29.7313930Z Collecting jupyterlab_widgets~=3.0.15 (from ipywidgets->jupyter->-r requirements.txt (line 6))
+2026-07-07T16:02:29.7346301Z   Downloading jupyterlab_widgets-3.0.16-py3-none-any.whl.metadata (20 kB)
+2026-07-07T16:02:29.7558469Z Collecting arrow>=0.15.0 (from isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.19.0->notebook->-r requirements.txt (line 7))
+2026-07-07T16:02:29.7589806Z   Downloading arrow-1.4.0-py3-none-any.whl.metadata (7.7 kB)
+2026-07-07T16:02:29.7885419Z Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+2026-07-07T16:02:29.8415339Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 341.2 MB/s  0:00:00
+2026-07-07T16:02:29.8452016Z Downloading matplotlib-3.11.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.0 MB)
+2026-07-07T16:02:29.8756653Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.0/10.0 MB 352.0 MB/s  0:00:00
+2026-07-07T16:02:29.8793747Z Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+2026-07-07T16:02:29.8858045Z Downloading scikit_learn-1.9.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.3 MB)
+2026-07-07T16:02:29.9146770Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.3/9.3 MB 344.9 MB/s  0:00:00
+2026-07-07T16:02:29.9181796Z Downloading jupyter-1.1.1-py2.py3-none-any.whl (2.7 kB)
+2026-07-07T16:02:29.9236709Z Downloading notebook-7.6.0-py3-none-any.whl (5.5 MB)
+2026-07-07T16:02:29.9413623Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 357.9 MB/s  0:00:00
+2026-07-07T16:02:29.9457999Z Downloading jupyter_builder-1.0.2-py3-none-any.whl (910 kB)
+2026-07-07T16:02:29.9514963Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 910.8/910.8 kB 183.6 MB/s  0:00:00
+2026-07-07T16:02:29.9548076Z Downloading jupyter_server-2.20.0-py3-none-any.whl (393 kB)
+2026-07-07T16:02:29.9611362Z Downloading jupyterlab-4.6.1-py3-none-any.whl (17.2 MB)
+2026-07-07T16:02:30.0133769Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.2/17.2 MB 340.1 MB/s  0:00:00
+2026-07-07T16:02:30.0169942Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-07-07T16:02:30.0228587Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-07-07T16:02:30.0286342Z Downloading jupyterlab_server-2.28.0-py3-none-any.whl (59 kB)
+2026-07-07T16:02:30.0342429Z Downloading notebook_shim-0.2.4-py3-none-any.whl (13 kB)
+2026-07-07T16:02:30.0397477Z Downloading mlflow-3.14.0-py3-none-any.whl (12.6 MB)
+2026-07-07T16:02:30.0768460Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.6/12.6 MB 356.3 MB/s  0:00:00
+2026-07-07T16:02:30.0807315Z Downloading mlflow_skinny-3.14.0-py3-none-any.whl (3.5 MB)
+2026-07-07T16:02:30.0931517Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.5/3.5 MB 322.3 MB/s  0:00:00
+2026-07-07T16:02:30.0966491Z Downloading mlflow_tracing-3.14.0-py3-none-any.whl (1.7 MB)
+2026-07-07T16:02:30.1043347Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 264.7 MB/s  0:00:00
+2026-07-07T16:02:30.1079107Z Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+2026-07-07T16:02:30.1457408Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 353.6 MB/s  0:00:00
+2026-07-07T16:02:30.1491870Z Downloading fastapi-0.139.0-py3-none-any.whl (130 kB)
+2026-07-07T16:02:30.1552696Z Downloading uvicorn-0.50.2-py3-none-any.whl (72 kB)
+2026-07-07T16:02:30.1610259Z Downloading aiohttp-3.14.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.8 MB)
+2026-07-07T16:02:30.1689277Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 272.5 MB/s  0:00:00
+2026-07-07T16:02:30.1721949Z Downloading alembic-1.18.5-py3-none-any.whl (264 kB)
+2026-07-07T16:02:30.1783566Z Downloading cachetools-7.1.4-py3-none-any.whl (16 kB)
+2026-07-07T16:02:30.1837753Z Downloading click-8.4.2-py3-none-any.whl (119 kB)
+2026-07-07T16:02:30.1894250Z Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+2026-07-07T16:02:30.1946481Z Downloading cryptography-48.0.1-cp311-abi3-manylinux_2_34_x86_64.whl (4.7 MB)
+2026-07-07T16:02:30.2099106Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 347.1 MB/s  0:00:00
+2026-07-07T16:02:30.2135061Z Downloading databricks_sdk-0.120.0-py3-none-any.whl (954 kB)
+2026-07-07T16:02:30.2195170Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 954.6/954.6 kB 183.7 MB/s  0:00:00
+2026-07-07T16:02:30.2227452Z Downloading docker-7.1.0-py3-none-any.whl (147 kB)
+2026-07-07T16:02:30.2283189Z Downloading flask-3.1.3-py3-none-any.whl (103 kB)
+2026-07-07T16:02:30.2340700Z Downloading flask_cors-6.0.5-py3-none-any.whl (16 kB)
+2026-07-07T16:02:30.2398883Z Downloading gitpython-3.1.50-py3-none-any.whl (212 kB)
+2026-07-07T16:02:30.2460157Z Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+2026-07-07T16:02:30.2515245Z Downloading google_auth-2.55.1-py3-none-any.whl (252 kB)
+2026-07-07T16:02:30.2574106Z Downloading graphene-3.4.3-py2.py3-none-any.whl (114 kB)
+2026-07-07T16:02:30.2629915Z Downloading graphql_core-3.2.11-py3-none-any.whl (214 kB)
+2026-07-07T16:02:30.2685457Z Downloading graphql_relay-3.2.0-py3-none-any.whl (16 kB)
+2026-07-07T16:02:30.2737072Z Downloading gunicorn-26.0.0-py3-none-any.whl (212 kB)
+2026-07-07T16:02:30.2792791Z Downloading huey-3.1.1-py3-none-any.whl (99 kB)
+2026-07-07T16:02:30.2849359Z Downloading importlib_metadata-9.0.0-py3-none-any.whl (27 kB)
+2026-07-07T16:02:30.2902206Z Downloading multidict-6.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (246 kB)
+2026-07-07T16:02:30.2959079Z Downloading opentelemetry_api-1.43.0-py3-none-any.whl (61 kB)
+2026-07-07T16:02:30.3014437Z Downloading opentelemetry_proto-1.43.0-py3-none-any.whl (72 kB)
+2026-07-07T16:02:30.3068316Z Downloading opentelemetry_sdk-1.43.0-py3-none-any.whl (178 kB)
+2026-07-07T16:02:30.3123709Z Downloading opentelemetry_semantic_conventions-0.64b0-py3-none-any.whl (203 kB)
+2026-07-07T16:02:30.3183384Z Downloading packaging-26.2-py3-none-any.whl (100 kB)
+2026-07-07T16:02:30.3242289Z Downloading protobuf-6.33.6-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
+2026-07-07T16:02:30.3303346Z Downloading pyarrow-24.0.0-cp311-cp311-manylinux_2_28_x86_64.whl (48.8 MB)
+2026-07-07T16:02:30.4578447Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.8/48.8 MB 388.7 MB/s  0:00:00
+2026-07-07T16:02:30.4614127Z Downloading pydantic-2.13.4-py3-none-any.whl (472 kB)
+2026-07-07T16:02:30.4680975Z Downloading pydantic_core-2.46.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2026-07-07T16:02:30.4767920Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 286.7 MB/s  0:00:00
+2026-07-07T16:02:30.4801432Z Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-07-07T16:02:30.4860075Z Downloading python_dotenv-1.2.2-py3-none-any.whl (22 kB)
+2026-07-07T16:02:30.4919823Z Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+2026-07-07T16:02:30.4973588Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 166.5 MB/s  0:00:00
+2026-07-07T16:02:30.5006388Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+2026-07-07T16:02:30.5067875Z Downloading charset_normalizer-3.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (221 kB)
+2026-07-07T16:02:30.5125460Z Downloading idna-3.18-py3-none-any.whl (65 kB)
+2026-07-07T16:02:30.5179397Z Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+2026-07-07T16:02:30.6120379Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 383.0 MB/s  0:00:00
+2026-07-07T16:02:30.6155024Z Downloading skops-0.14.0-py3-none-any.whl (132 kB)
+2026-07-07T16:02:30.6211164Z Downloading smmap-5.0.3-py3-none-any.whl (24 kB)
+2026-07-07T16:02:30.6267601Z Downloading sqlalchemy-2.0.51-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.3 MB)
+2026-07-07T16:02:30.6384607Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 321.0 MB/s  0:00:00
+2026-07-07T16:02:30.6418233Z Downloading sqlparse-0.5.5-py3-none-any.whl (46 kB)
+2026-07-07T16:02:30.6473064Z Downloading starlette-1.3.1-py3-none-any.whl (73 kB)
+2026-07-07T16:02:30.6527946Z Downloading anyio-4.14.1-py3-none-any.whl (124 kB)
+2026-07-07T16:02:30.6582522Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-07-07T16:02:30.6656651Z Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+2026-07-07T16:02:30.6712946Z Downloading yarl-1.24.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (106 kB)
+2026-07-07T16:02:30.6767614Z Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+2026-07-07T16:02:30.6824688Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+2026-07-07T16:02:30.6885451Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2026-07-07T16:02:30.6938162Z Downloading black-26.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.8 MB)
+2026-07-07T16:02:30.7020558Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 262.2 MB/s  0:00:00
+2026-07-07T16:02:30.7053268Z Downloading pytokens-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (260 kB)
+2026-07-07T16:02:30.7111921Z Downloading flake8-7.3.0-py2.py3-none-any.whl (57 kB)
+2026-07-07T16:02:30.7168681Z Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+2026-07-07T16:02:30.7220987Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+2026-07-07T16:02:30.7277698Z Downloading pyflakes-3.4.0-py2.py3-none-any.whl (63 kB)
+2026-07-07T16:02:30.7332197Z Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+2026-07-07T16:02:30.7384192Z Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+2026-07-07T16:02:30.7442593Z Downloading annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
+2026-07-07T16:02:30.7495520Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+2026-07-07T16:02:30.7548608Z Downloading argon2_cffi-25.1.0-py3-none-any.whl (14 kB)
+2026-07-07T16:02:30.7604000Z Downloading async_lru-2.3.0-py3-none-any.whl (8.4 kB)
+2026-07-07T16:02:30.7655908Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+2026-07-07T16:02:30.7710564Z Downloading babel-2.18.0-py3-none-any.whl (10.2 MB)
+2026-07-07T16:02:30.8019474Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 349.7 MB/s  0:00:00
+2026-07-07T16:02:30.8055288Z Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+2026-07-07T16:02:30.8110687Z Downloading certifi-2026.6.17-py3-none-any.whl (133 kB)
+2026-07-07T16:02:30.8169552Z Downloading cffi-2.1.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (217 kB)
+2026-07-07T16:02:30.8234305Z Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+2026-07-07T16:02:30.8298080Z Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+2026-07-07T16:02:30.8352648Z Downloading fonttools-4.63.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.1 MB)
+2026-07-07T16:02:30.8524433Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.1/5.1 MB 327.2 MB/s  0:00:00
+2026-07-07T16:02:30.8560277Z Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+2026-07-07T16:02:30.8622707Z Downloading greenlet-3.5.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (617 kB)
+2026-07-07T16:02:30.8680964Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 617.4/617.4 kB 109.0 MB/s  0:00:00
+2026-07-07T16:02:30.8717298Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-07-07T16:02:30.8775273Z Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+2026-07-07T16:02:30.8830970Z Downloading ipykernel-7.3.0-py3-none-any.whl (120 kB)
+2026-07-07T16:02:30.8894846Z Downloading comm-0.2.3-py3-none-any.whl (7.3 kB)
+2026-07-07T16:02:30.8950792Z Downloading debugpy-1.8.21-cp311-cp311-manylinux_2_34_x86_64.whl (3.1 MB)
+2026-07-07T16:02:30.9076323Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 274.8 MB/s  0:00:00
+2026-07-07T16:02:30.9108532Z Downloading ipython-9.15.0-py3-none-any.whl (630 kB)
+2026-07-07T16:02:30.9161471Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 630.9/630.9 kB 113.5 MB/s  0:00:00
+2026-07-07T16:02:30.9193384Z Downloading prompt_toolkit-3.0.52-py3-none-any.whl (391 kB)
+2026-07-07T16:02:30.9256493Z Downloading decorator-5.3.1-py3-none-any.whl (10 kB)
+2026-07-07T16:02:30.9308556Z Downloading ipython_pygments_lexers-1.1.1-py3-none-any.whl (8.1 kB)
+2026-07-07T16:02:30.9359902Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+2026-07-07T16:02:30.9411646Z Downloading jedi-0.20.0-py2.py3-none-any.whl (4.9 MB)
+2026-07-07T16:02:30.9570235Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 340.4 MB/s  0:00:00
+2026-07-07T16:02:30.9602655Z Downloading parso-0.8.7-py2.py3-none-any.whl (107 kB)
+2026-07-07T16:02:30.9658574Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-07-07T16:02:30.9714003Z Downloading json5-0.15.0-py3-none-any.whl (36 kB)
+2026-07-07T16:02:30.9766806Z Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+2026-07-07T16:02:30.9821838Z Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+2026-07-07T16:02:30.9872659Z Downloading jupyter_client-8.9.1-py3-none-any.whl (109 kB)
+2026-07-07T16:02:30.9926292Z Downloading jupyter_core-5.9.1-py3-none-any.whl (29 kB)
+2026-07-07T16:02:30.9981052Z Downloading jupyter_events-0.12.1-py3-none-any.whl (19 kB)
+2026-07-07T16:02:31.0035813Z Downloading jsonpointer-3.1.1-py3-none-any.whl (7.7 kB)
+2026-07-07T16:02:31.0086211Z Downloading jupyter_lsp-2.3.1-py3-none-any.whl (77 kB)
+2026-07-07T16:02:31.0141021Z Downloading jupyter_server_terminals-0.5.4-py3-none-any.whl (13 kB)
+2026-07-07T16:02:31.0196138Z Downloading kiwisolver-1.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+2026-07-07T16:02:31.0266828Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 245.7 MB/s  0:00:00
+2026-07-07T16:02:31.0299732Z Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2026-07-07T16:02:31.0353735Z Downloading matplotlib_inline-0.2.2-py3-none-any.whl (9.5 kB)
+2026-07-07T16:02:31.0408044Z Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+2026-07-07T16:02:31.0461511Z Downloading narwhals-2.23.0-py3-none-any.whl (458 kB)
+2026-07-07T16:02:31.0527286Z Downloading nbconvert-7.17.1-py3-none-any.whl (261 kB)
+2026-07-07T16:02:31.0590083Z Downloading mistune-3.3.2-py3-none-any.whl (61 kB)
+2026-07-07T16:02:31.0648419Z Downloading bleach-6.4.0-py3-none-any.whl (165 kB)
+2026-07-07T16:02:31.0704239Z Downloading nbclient-0.11.0-py3-none-any.whl (25 kB)
+2026-07-07T16:02:31.0760089Z Downloading nbformat-5.10.4-py3-none-any.whl (78 kB)
+2026-07-07T16:02:31.0814802Z Downloading fastjsonschema-2.21.2-py3-none-any.whl (24 kB)
+2026-07-07T16:02:31.0867159Z Downloading nest_asyncio2-1.7.2-py3-none-any.whl (7.8 kB)
+2026-07-07T16:02:31.0923111Z Downloading overrides-7.7.0-py3-none-any.whl (17 kB)
+2026-07-07T16:02:31.0978928Z Downloading pandocfilters-1.5.1-py2.py3-none-any.whl (8.7 kB)
+2026-07-07T16:02:31.1028369Z Downloading pathspec-1.1.1-py3-none-any.whl (57 kB)
+2026-07-07T16:02:31.1099606Z Downloading pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+2026-07-07T16:02:31.1157545Z Downloading pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+2026-07-07T16:02:31.1390335Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 321.8 MB/s  0:00:00
+2026-07-07T16:02:31.1426639Z Downloading platformdirs-4.10.0-py3-none-any.whl (22 kB)
+2026-07-07T16:02:31.1482277Z Downloading prettytable-3.18.0-py3-none-any.whl (37 kB)
+2026-07-07T16:02:31.1543666Z Downloading prometheus_client-0.25.0-py3-none-any.whl (64 kB)
+2026-07-07T16:02:31.1618817Z Downloading propcache-0.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (58 kB)
+2026-07-07T16:02:31.1655644Z Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-07-07T16:02:31.1712797Z Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+2026-07-07T16:02:31.1765581Z Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+2026-07-07T16:02:31.1823105Z Downloading pyasn1-0.6.3-py3-none-any.whl (83 kB)
+2026-07-07T16:02:31.1880513Z Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
+2026-07-07T16:02:31.1949198Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 216.7 MB/s  0:00:00
+2026-07-07T16:02:31.1983568Z Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+2026-07-07T16:02:31.2041069Z Downloading python_json_logger-4.1.0-py3-none-any.whl (15 kB)
+2026-07-07T16:02:31.2094406Z Downloading pytz-2026.2-py2.py3-none-any.whl (510 kB)
+2026-07-07T16:02:31.2181960Z Downloading pyzmq-27.1.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (857 kB)
+2026-07-07T16:02:31.2238293Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 857.0/857.0 kB 168.5 MB/s  0:00:00
+2026-07-07T16:02:31.2270086Z Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+2026-07-07T16:02:31.2322394Z Downloading rfc3986_validator-0.1.1-py2.py3-none-any.whl (4.2 kB)
+2026-07-07T16:02:31.2378400Z Downloading rfc3987_syntax-1.1.0-py3-none-any.whl (8.0 kB)
+2026-07-07T16:02:31.2427805Z Downloading lark-1.3.1-py3-none-any.whl (113 kB)
+2026-07-07T16:02:31.2490154Z Downloading rpds_py-2026.6.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (371 kB)
+2026-07-07T16:02:31.2553389Z Downloading send2trash-2.1.0-py3-none-any.whl (17 kB)
+2026-07-07T16:02:31.2609624Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-07-07T16:02:31.2661734Z Downloading stack_data-0.6.3-py3-none-any.whl (24 kB)
+2026-07-07T16:02:31.2731170Z Downloading asttokens-3.0.1-py3-none-any.whl (27 kB)
+2026-07-07T16:02:31.2784463Z Downloading executing-2.2.1-py2.py3-none-any.whl (28 kB)
+2026-07-07T16:02:31.2837201Z Downloading terminado-0.18.1-py3-none-any.whl (14 kB)
+2026-07-07T16:02:31.2888697Z Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+2026-07-07T16:02:31.2941265Z Downloading tinycss2-1.5.1-py3-none-any.whl (28 kB)
+2026-07-07T16:02:31.2995043Z Downloading tornado-6.5.7-cp39-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (449 kB)
+2026-07-07T16:02:31.3058464Z Downloading traitlets-5.15.1-py3-none-any.whl (85 kB)
+2026-07-07T16:02:31.3118566Z Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+2026-07-07T16:02:31.3173091Z Downloading tzdata-2026.2-py2.py3-none-any.whl (349 kB)
+2026-07-07T16:02:31.3233966Z Downloading wcwidth-0.8.2-py3-none-any.whl (323 kB)
+2026-07-07T16:02:31.3294886Z Downloading webcolors-25.10.0-py3-none-any.whl (14 kB)
+2026-07-07T16:02:31.3347024Z Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+2026-07-07T16:02:31.3397174Z Downloading websocket_client-1.9.0-py3-none-any.whl (82 kB)
+2026-07-07T16:02:31.3450094Z Downloading werkzeug-3.1.8-py3-none-any.whl (226 kB)
+2026-07-07T16:02:31.3507772Z Downloading zipp-4.1.0-py3-none-any.whl (10 kB)
+2026-07-07T16:02:31.3560705Z Downloading argon2_cffi_bindings-25.1.0-cp39-abi3-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (87 kB)
+2026-07-07T16:02:31.3616719Z Downloading beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+2026-07-07T16:02:31.3672303Z Downloading soupsieve-2.8.4-py3-none-any.whl (37 kB)
+2026-07-07T16:02:31.3726053Z Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+2026-07-07T16:02:31.3779407Z Downloading fqdn-1.5.1-py3-none-any.whl (9.1 kB)
+2026-07-07T16:02:31.3840244Z Downloading ipywidgets-8.1.8-py3-none-any.whl (139 kB)
+2026-07-07T16:02:31.3907101Z Downloading jupyterlab_widgets-3.0.16-py3-none-any.whl (914 kB)
+2026-07-07T16:02:31.3965396Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 914.9/914.9 kB 177.9 MB/s  0:00:00
+2026-07-07T16:02:31.4005715Z Downloading widgetsnbextension-4.0.15-py3-none-any.whl (2.2 MB)
+2026-07-07T16:02:31.4097860Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 271.3 MB/s  0:00:00
+2026-07-07T16:02:31.4130863Z Downloading isoduration-20.11.0-py3-none-any.whl (11 kB)
+2026-07-07T16:02:31.4183620Z Downloading arrow-1.4.0-py3-none-any.whl (68 kB)
+2026-07-07T16:02:31.4239058Z Downloading jupyter_console-6.6.3-py3-none-any.whl (24 kB)
+2026-07-07T16:02:31.4292750Z Downloading jupyterlab_pygments-0.3.0-py3-none-any.whl (15 kB)
+2026-07-07T16:02:31.4345040Z Downloading mako-1.3.12-py3-none-any.whl (78 kB)
+2026-07-07T16:02:31.4400923Z Downloading pure_eval-0.2.3-py3-none-any.whl (11 kB)
+2026-07-07T16:02:31.4453365Z Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+2026-07-07T16:02:31.4508744Z Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+2026-07-07T16:02:31.4559950Z Downloading uri_template-1.3.0-py3-none-any.whl (11 kB)
+2026-07-07T16:02:32.1714994Z Installing collected packages: webencodings, pytz, pure-eval, ptyprocess, huey, fastjsonschema, zipp, widgetsnbextension, websocket-client, webcolors, wcwidth, urllib3, uri-template, tzdata, typing-extensions, traitlets, tornado, tinycss2, threadpoolctl, sqlparse, soupsieve, smmap, six, send2trash, rpds-py, rfc3986-validator, pyzmq, pyyaml, pytokens, python-json-logger, python-dotenv, pyparsing, pygments, pyflakes, pycparser, pycodestyle, pyasn1, pyarrow, psutil, protobuf, propcache, prometheus-client, pluggy, platformdirs, pillow, pexpect, pathspec, parso, pandocfilters, packaging, overrides, numpy, nest-asyncio2, narwhals, mypy-extensions, multidict, mistune, mccabe, markupsafe, lark, kiwisolver, jupyterlab_widgets, jupyterlab-pygments, jsonpointer, json5, joblib, itsdangerous, iniconfig, idna, h11, greenlet, graphql-core, frozenlist, fqdn, fonttools, executing, defusedxml, decorator, debugpy, cycler, comm, cloudpickle, click, charset_normalizer, certifi, cachetools, blinker, bleach, babel, attrs, async-lru, asttokens, annotated-types, annotated-doc, aiohappyeyeballs, yarl, werkzeug, uvicorn, typing-inspection, terminado, stack_data, sqlalchemy, scipy, rfc3987-syntax, rfc3339-validator, requests, referencing, python-dateutil, pytest, pydantic-core, pyasn1-modules, prompt_toolkit, prettytable, opentelemetry-proto, opentelemetry-api, matplotlib-inline, Mako, jupyter-core, jinja2, jedi, ipython-pygments-lexers, importlib_metadata, httpcore, gunicorn, graphql-relay, gitdb, flake8, contourpy, cffi, black, beautifulsoup4, anyio, aiosignal, starlette, scikit-learn, pydantic, pandas, opentelemetry-semantic-conventions, matplotlib, jupyter-server-terminals, jupyter-client, jupyter-builder, jsonschema-specifications, ipython, httpx, graphene, gitpython, Flask, docker, cryptography, arrow, argon2-cffi-bindings, alembic, aiohttp, skops, seaborn, opentelemetry-sdk, jsonschema, isoduration, ipywidgets, ipykernel, google-auth, Flask-CORS, fastapi, argon2-cffi, nbformat, jupyter-console, databricks-sdk, nbclient, mlflow-tracing, mlflow-skinny, jupyter-events, nbconvert, mlflow, jupyter-server, notebook-shim, jupyterlab-server, jupyter-lsp, jupyterlab, notebook, jupyter
+2026-07-07T16:03:05.1119860Z 
+2026-07-07T16:03:05.1191660Z Successfully installed Flask-3.1.3 Flask-CORS-6.0.5 Mako-1.3.12 aiohappyeyeballs-2.7.1 aiohttp-3.14.1 aiosignal-1.4.0 alembic-1.18.5 annotated-doc-0.0.4 annotated-types-0.7.0 anyio-4.14.1 argon2-cffi-25.1.0 argon2-cffi-bindings-25.1.0 arrow-1.4.0 asttokens-3.0.1 async-lru-2.3.0 attrs-26.1.0 babel-2.18.0 beautifulsoup4-4.15.0 black-26.5.1 bleach-6.4.0 blinker-1.9.0 cachetools-7.1.4 certifi-2026.6.17 cffi-2.1.0 charset_normalizer-3.4.9 click-8.4.2 cloudpickle-3.1.2 comm-0.2.3 contourpy-1.3.3 cryptography-48.0.1 cycler-0.12.1 databricks-sdk-0.120.0 debugpy-1.8.21 decorator-5.3.1 defusedxml-0.7.1 docker-7.1.0 executing-2.2.1 fastapi-0.139.0 fastjsonschema-2.21.2 flake8-7.3.0 fonttools-4.63.0 fqdn-1.5.1 frozenlist-1.8.0 gitdb-4.0.12 gitpython-3.1.50 google-auth-2.55.1 graphene-3.4.3 graphql-core-3.2.11 graphql-relay-3.2.0 greenlet-3.5.3 gunicorn-26.0.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 huey-3.1.1 idna-3.18 importlib_metadata-9.0.0 iniconfig-2.3.0 ipykernel-7.3.0 ipython-9.15.0 ipython-pygments-lexers-1.1.1 ipywidgets-8.1.8 isoduration-20.11.0 itsdangerous-2.2.0 jedi-0.20.0 jinja2-3.1.6 joblib-1.5.3 json5-0.15.0 jsonpointer-3.1.1 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 jupyter-1.1.1 jupyter-builder-1.0.2 jupyter-client-8.9.1 jupyter-console-6.6.3 jupyter-core-5.9.1 jupyter-events-0.12.1 jupyter-lsp-2.3.1 jupyter-server-2.20.0 jupyter-server-terminals-0.5.4 jupyterlab-4.6.1 jupyterlab-pygments-0.3.0 jupyterlab-server-2.28.0 jupyterlab_widgets-3.0.16 kiwisolver-1.5.0 lark-1.3.1 markupsafe-3.0.3 matplotlib-3.11.0 matplotlib-inline-0.2.2 mccabe-0.7.0 mistune-3.3.2 mlflow-3.14.0 mlflow-skinny-3.14.0 mlflow-tracing-3.14.0 multidict-6.7.1 mypy-extensions-1.1.0 narwhals-2.23.0 nbclient-0.11.0 nbconvert-7.17.1 nbformat-5.10.4 nest-asyncio2-1.7.2 notebook-7.6.0 notebook-shim-0.2.4 numpy-2.4.6 opentelemetry-api-1.43.0 opentelemetry-proto-1.43.0 opentelemetry-sdk-1.43.0 opentelemetry-semantic-conventions-0.64b0 overrides-7.7.0 packaging-26.2 pandas-2.3.3 pandocfilters-1.5.1 parso-0.8.7 pathspec-1.1.1 pexpect-4.9.0 pillow-12.3.0 platformdirs-4.10.0 pluggy-1.6.0 prettytable-3.18.0 prometheus-client-0.25.0 prompt_toolkit-3.0.52 propcache-0.5.2 protobuf-6.33.6 psutil-7.2.2 ptyprocess-0.7.0 pure-eval-0.2.3 pyarrow-24.0.0 pyasn1-0.6.3 pyasn1-modules-0.4.2 pycodestyle-2.14.0 pycparser-3.0 pydantic-2.13.4 pydantic-core-2.46.4 pyflakes-3.4.0 pygments-2.20.0 pyparsing-3.3.2 pytest-9.1.1 python-dateutil-2.9.0.post0 python-dotenv-1.2.2 python-json-logger-4.1.0 pytokens-0.4.1 pytz-2026.2 pyyaml-6.0.3 pyzmq-27.1.0 referencing-0.37.0 requests-2.34.2 rfc3339-validator-0.1.4 rfc3986-validator-0.1.1 rfc3987-syntax-1.1.0 rpds-py-2026.6.3 scikit-learn-1.9.0 scipy-1.17.1 seaborn-0.13.2 send2trash-2.1.0 six-1.17.0 skops-0.14.0 smmap-5.0.3 soupsieve-2.8.4 sqlalchemy-2.0.51 sqlparse-0.5.5 stack_data-0.6.3 starlette-1.3.1 terminado-0.18.1 threadpoolctl-3.6.0 tinycss2-1.5.1 tornado-6.5.7 traitlets-5.15.1 typing-extensions-4.16.0 typing-inspection-0.4.2 tzdata-2026.2 uri-template-1.3.0 urllib3-2.7.0 uvicorn-0.50.2 wcwidth-0.8.2 webcolors-25.10.0 webencodings-0.5.1 websocket-client-1.9.0 werkzeug-3.1.8 widgetsnbextension-4.0.15 yarl-1.24.2 zipp-4.1.0
+2026-07-07T16:03:05.6179069Z ##[group]Run flake8 src tests --max-line-length=100 --extend-ignore=E402,E501,W391
+2026-07-07T16:03:05.6179676Z [36;1mflake8 src tests --max-line-length=100 --extend-ignore=E402,E501,W391[0m
+2026-07-07T16:03:05.6214417Z shell: /usr/bin/bash -e {0}
+2026-07-07T16:03:05.6214657Z env:
+2026-07-07T16:03:05.6214919Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-07T16:03:05.6215352Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-07T16:03:05.6215784Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-07T16:03:05.6216406Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-07T16:03:05.6216792Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-07T16:03:05.6217177Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-07T16:03:05.6217493Z ##[endgroup]
+2026-07-07T16:03:06.3507895Z ##[group]Run python -m pytest tests
+2026-07-07T16:03:06.3508247Z [36;1mpython -m pytest tests[0m
+2026-07-07T16:03:06.3541303Z shell: /usr/bin/bash -e {0}
+2026-07-07T16:03:06.3541545Z env:
+2026-07-07T16:03:06.3541802Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-07T16:03:06.3542238Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-07-07T16:03:06.3542661Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-07T16:03:06.3543036Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-07T16:03:06.3543422Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-07-07T16:03:06.3543810Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-07-07T16:03:06.3544128Z ##[endgroup]
+2026-07-07T16:03:09.9138774Z ============================= test session starts ==============================
+2026-07-07T16:03:09.9139374Z platform linux -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0
+2026-07-07T16:03:09.9140131Z rootdir: /home/runner/work/heart-disease-mlops-assignment/heart-disease-mlops-assignment
+2026-07-07T16:03:09.9141016Z plugins: anyio-4.14.1
+2026-07-07T16:03:09.9141287Z collected 8 items
+2026-07-07T16:03:09.9141440Z 
+2026-07-07T16:03:09.9308669Z tests/test_data_pipeline.py ....                                         [ 50%]
+2026-07-07T16:03:10.2033756Z tests/test_model_packaging.py F.FF                                       [100%]
+2026-07-07T16:03:10.2034491Z 
+2026-07-07T16:03:10.2034679Z =================================== FAILURES ===================================
+2026-07-07T16:03:10.2035418Z _______________________ test_packaged_model_files_exist ________________________
+2026-07-07T16:03:10.2036403Z 
+2026-07-07T16:03:10.2036701Z     def test_packaged_model_files_exist() -> None:
+2026-07-07T16:03:10.2037422Z >       assert FINAL_MODEL_PATH.exists()
+2026-07-07T16:03:10.2037946Z E       AssertionError: assert False
+2026-07-07T16:03:10.2038420Z E        +  where False = exists()
+2026-07-07T16:03:10.2039696Z E        +    where exists = PosixPath('/home/runner/work/heart-disease-mlops-assignment/heart-disease-mlops-assignment/models/final_heart_disease_model.joblib').exists
+2026-07-07T16:03:10.2040923Z 
+2026-07-07T16:03:10.2041163Z tests/test_model_packaging.py:19: AssertionError
+2026-07-07T16:03:10.2041901Z _____________ test_final_model_can_predict_from_saved_sample_input _____________
+2026-07-07T16:03:10.2042438Z 
+2026-07-07T16:03:10.2042762Z     def test_final_model_can_predict_from_saved_sample_input() -> None:
+2026-07-07T16:03:10.2043427Z >       model = joblib.load(FINAL_MODEL_PATH)
+2026-07-07T16:03:10.2043910Z                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-07-07T16:03:10.2044215Z 
+2026-07-07T16:03:10.2044398Z tests/test_model_packaging.py:32: 
+2026-07-07T16:03:10.2044932Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-07-07T16:03:10.2045368Z 
+2026-07-07T16:03:10.2046407Z filename = '/home/runner/work/heart-disease-mlops-assignment/heart-disease-mlops-assignment/models/final_heart_disease_model.joblib'
+2026-07-07T16:03:10.2047456Z mmap_mode = None, ensure_native_byte_order = True
+2026-07-07T16:03:10.2047702Z 
+2026-07-07T16:03:10.2047902Z     def load(filename, mmap_mode=None, ensure_native_byte_order="auto"):
+2026-07-07T16:03:10.2048440Z         """Reconstruct a Python object from a file persisted with joblib.dump.
+2026-07-07T16:03:10.2048854Z     
+2026-07-07T16:03:10.2049108Z         Read more in the :ref:`User Guide <persistence>`.
+2026-07-07T16:03:10.2049437Z     
+2026-07-07T16:03:10.2049746Z         WARNING: joblib.load relies on the pickle module and can therefore
+2026-07-07T16:03:10.2050269Z         execute arbitrary Python code. It should therefore never be used
+2026-07-07T16:03:10.2050700Z         to load files from untrusted sources.
+2026-07-07T16:03:10.2050997Z     
+2026-07-07T16:03:10.2051193Z         Parameters
+2026-07-07T16:03:10.2051413Z         ----------
+2026-07-07T16:03:10.2051678Z         filename: str, pathlib.Path, or file object.
+2026-07-07T16:03:10.2052446Z             The file object or path of the file from which to load the object
+2026-07-07T16:03:10.2052907Z         mmap_mode: {None, 'r+', 'r', 'w+', 'c'}, optional
+2026-07-07T16:03:10.2053327Z             If not None, the arrays are memory-mapped from the disk. This
+2026-07-07T16:03:10.2053797Z             mode has no effect for compressed files. Note that in this
+2026-07-07T16:03:10.2054266Z             case the reconstructed object might no longer match exactly
+2026-07-07T16:03:10.2054669Z             the originally pickled object.
+2026-07-07T16:03:10.2055047Z         ensure_native_byte_order: bool, or 'auto', default=='auto'
+2026-07-07T16:03:10.2055547Z             If True, ensures that the byte order of the loaded arrays matches the
+2026-07-07T16:03:10.2056384Z             native byte ordering (or _endianness_) of the host system. This is not
+2026-07-07T16:03:10.2056871Z             compatible with memory-mapped arrays and using non-null `mmap_mode`
+2026-07-07T16:03:10.2057346Z             parameter at the same time will raise an error. The default 'auto'
+2026-07-07T16:03:10.2057966Z             parameter is equivalent to True if `mmap_mode` is None, else False.
+2026-07-07T16:03:10.2058308Z     
+2026-07-07T16:03:10.2058476Z         Returns
+2026-07-07T16:03:10.2058665Z         -------
+2026-07-07T16:03:10.2058868Z         result: any Python object
+2026-07-07T16:03:10.2059122Z             The object stored in the file.
+2026-07-07T16:03:10.2059365Z     
+2026-07-07T16:03:10.2059532Z         See Also
+2026-07-07T16:03:10.2059716Z         --------
+2026-07-07T16:03:10.2059929Z         joblib.dump : function to save an object
+2026-07-07T16:03:10.2060190Z     
+2026-07-07T16:03:10.2060351Z         Notes
+2026-07-07T16:03:10.2060524Z         -----
+2026-07-07T16:03:10.2060694Z     
+2026-07-07T16:03:10.2060963Z         This function can load numpy array files saved separately during the
+2026-07-07T16:03:10.2061422Z         dump. If the mmap_mode argument is given, it is passed to np.load and
+2026-07-07T16:03:10.2061873Z         arrays are loaded as memmaps. As a consequence, the reconstructed
+2026-07-07T16:03:10.2062322Z         object might not match the original pickled object. Note that if the
+2026-07-07T16:03:10.2062764Z         file was saved with compression, the arrays cannot be memmapped.
+2026-07-07T16:03:10.2063099Z         """
+2026-07-07T16:03:10.2063301Z         if ensure_native_byte_order == "auto":
+2026-07-07T16:03:10.2063615Z             ensure_native_byte_order = mmap_mode is None
+2026-07-07T16:03:10.2063894Z     
+2026-07-07T16:03:10.2064124Z         if ensure_native_byte_order and mmap_mode is not None:
+2026-07-07T16:03:10.2064441Z             raise ValueError(
+2026-07-07T16:03:10.2064804Z                 "Native byte ordering can only be enforced if 'mmap_mode' parameter "
+2026-07-07T16:03:10.2065338Z                 f"is set to None, but got 'mmap_mode={mmap_mode}' instead."
+2026-07-07T16:03:10.2065655Z             )
+2026-07-07T16:03:10.2065828Z     
+2026-07-07T16:03:10.2066338Z         if Path is not None and isinstance(filename, Path):
+2026-07-07T16:03:10.2066663Z             filename = str(filename)
+2026-07-07T16:03:10.2066915Z     
+2026-07-07T16:03:10.2067104Z         if hasattr(filename, "read"):
+2026-07-07T16:03:10.2067354Z             fobj = filename
+2026-07-07T16:03:10.2067597Z             filename = getattr(fobj, "name", "")
+2026-07-07T16:03:10.2068011Z             with _validate_fileobject_and_memmap(fobj, filename, mmap_mode) as (fobj, _):
+2026-07-07T16:03:10.2068521Z                 obj = _unpickle(fobj, ensure_native_byte_order=ensure_native_byte_order)
+2026-07-07T16:03:10.2068884Z         else:
+2026-07-07T16:03:10.2069086Z >           with open(filename, "rb") as f:
+2026-07-07T16:03:10.2069348Z                  ^^^^^^^^^^^^^^^^^^^^
+2026-07-07T16:03:10.2070117Z E           FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/heart-disease-mlops-assignment/heart-disease-mlops-assignment/models/final_heart_disease_model.joblib'
+2026-07-07T16:03:10.2070958Z 
+2026-07-07T16:03:10.2071347Z /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/joblib/numpy_pickle.py:735: FileNotFoundError
+2026-07-07T16:03:10.2071969Z _____________________ test_source_model_loads_successfully _____________________
+2026-07-07T16:03:10.2072248Z 
+2026-07-07T16:03:10.2072384Z     def test_source_model_loads_successfully() -> None:
+2026-07-07T16:03:10.2072684Z >       model = load_model()
+2026-07-07T16:03:10.2072909Z                 ^^^^^^^^^^^^
+2026-07-07T16:03:10.2073041Z 
+2026-07-07T16:03:10.2073146Z tests/test_model_packaging.py:44: 
+2026-07-07T16:03:10.2073453Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-07-07T16:03:10.2073686Z 
+2026-07-07T16:03:10.2073775Z     def load_model():
+2026-07-07T16:03:10.2073998Z         if not SOURCE_MODEL_PATH.exists():
+2026-07-07T16:03:10.2074270Z >           raise FileNotFoundError(
+2026-07-07T16:03:10.2074595Z                 f"Expected tuned model not found at: {SOURCE_MODEL_PATH}"
+2026-07-07T16:03:10.2074924Z             )
+2026-07-07T16:03:10.2075588Z E           FileNotFoundError: Expected tuned model not found at: /home/runner/work/heart-disease-mlops-assignment/heart-disease-mlops-assignment/models/tuned_best_model.joblib
+2026-07-07T16:03:10.2076624Z 
+2026-07-07T16:03:10.2076759Z src/models/package_model.py:28: FileNotFoundError
+2026-07-07T16:03:10.2077115Z =========================== short test summary info ============================
+2026-07-07T16:03:10.2077741Z FAILED tests/test_model_packaging.py::test_packaged_model_files_exist - AssertionError: assert False
+2026-07-07T16:03:10.2078215Z  +  where False = exists()
+2026-07-07T16:03:10.2078871Z  +    where exists = PosixPath('/home/runner/work/heart-disease-mlops-assignment/heart-disease-mlops-assignment/models/final_heart_disease_model.joblib').exists
+2026-07-07T16:03:10.2080354Z FAILED tests/test_model_packaging.py::test_final_model_can_predict_from_saved_sample_input - FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/heart-disease-mlops-assignment/heart-disease-mlops-assignment/models/final_heart_disease_model.joblib'
+2026-07-07T16:03:10.2082131Z FAILED tests/test_model_packaging.py::test_source_model_loads_successfully - FileNotFoundError: Expected tuned model not found at: /home/runner/work/heart-disease-mlops-assignment/heart-disease-mlops-assignment/models/tuned_best_model.joblib
+2026-07-07T16:03:10.2083151Z ========================= 3 failed, 5 passed in 3.16s ==========================
+2026-07-07T16:03:10.5110979Z ##[error]Process completed with exit code 1.
+2026-07-07T16:03:10.5257872Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-07T16:03:10.5259117Z Post job cleanup.
+2026-07-07T16:03:10.6129779Z [command]/usr/bin/git version
+2026-07-07T16:03:10.6164586Z git version 2.54.0
+2026-07-07T16:03:10.6240685Z Temporarily overriding HOME='/home/runner/work/_temp/b5f41549-5863-4a6b-b684-d470fa88fce3' before making global git config changes
+2026-07-07T16:03:10.6242116Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-07T16:03:10.6248148Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/heart-disease-mlops-assignment/heart-disease-mlops-assignment
+2026-07-07T16:03:10.6293019Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-07T16:03:10.6335736Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-07T16:03:10.6597746Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-07T16:03:10.6655157Z http.https://github.com/.extraheader
+2026-07-07T16:03:10.6659028Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-07-07T16:03:10.6695810Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-07T16:03:10.6959966Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-07T16:03:10.7015263Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-07T16:03:10.7448103Z Cleaning up orphan processes
+2026-07-07T16:03:10.7904704Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

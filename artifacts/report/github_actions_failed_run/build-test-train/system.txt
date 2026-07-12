@@ -1,0 +1,8 @@
+2026-07-07T16:02:14.8710000Z Evaluating build-test-train.if
+2026-07-07T16:02:14.8710000Z Evaluating: success()
+2026-07-07T16:02:14.8710000Z Result: true
+2026-07-07T16:02:15.3350000Z Requested labels: ubuntu-latest
+2026-07-07T16:02:15.3350000Z Job defined at: 2024ac05094-Riyaz-Bits/heart-disease-mlops-assignment/.github/workflows/ci.yml@refs/heads/main
+2026-07-07T16:02:15.3350000Z Waiting for a runner to pick up this job...
+2026-07-07T16:02:15.3430000Z Job is about to start running on the hosted runner: GitHub Actions 1000000002
+2026-07-07T16:02:15.3440000Z Job is waiting for a hosted runner to come online.

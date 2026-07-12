@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/RA7628/Downloads/Bits%20pilani/Bits%20traning%20session/Sem-3/Mlops/Assignment-1/Ass1%20ans/heart-disease-mlops-assignment/mlruns/877856833476004292/6c982ea3f20d4403b147419195312758/artifacts
+end_time: 1783347997373
+entry_point_name: ''
+experiment_id: '877856833476004292'
+lifecycle_stage: active
+run_id: 6c982ea3f20d4403b147419195312758
+run_name: logistic_regression_tracking
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1783347984914
+status: 3
+tags: []
+user_id: RA7628

@@ -1,0 +1,9 @@
+artifact_location: file:///C:/Users/RA7628/Downloads/Bits%20pilani/Bits%20traning%20session/Sem-3/Mlops/Assignment-1/Ass1%20ans/heart-disease-mlops-assignment/mlruns/877856833476004292
+creation_time: 1783347930061
+effective_trace_archival_retention: null
+experiment_id: '877856833476004292'
+last_update_time: 1783347930061
+lifecycle_stage: active
+name: heart_disease_classification
+trace_location: null
+workspace: default

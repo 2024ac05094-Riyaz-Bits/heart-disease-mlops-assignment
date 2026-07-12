@@ -1,0 +1,11 @@
+execution_duration_ms: 1391
+request_preview: How do I compare different retrieval configurations systematically?
+request_time: '2026-07-02T17:52:50.107Z'
+response_preview: You can run multiple experiments with different settings and compare
+  them in the MLflow UI.
+state: OK
+trace_id: tr-629e6e682015463edeadc4fd7099786e
+trace_location:
+  mlflow_experiment:
+    experiment_id: '387372375296911559'
+  type: MLFLOW_EXPERIMENT

@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/RA7628/Downloads/Bits%20pilani/Bits%20traning%20session/Sem-3/Mlops/Assignment-1/Ass1%20ans/heart-disease-mlops-assignment/mlruns/877856833476004292/models/m-dbd70770a7d649d4a7460b24c0ccf2dc/artifacts
+creation_timestamp: 1783347931620
+experiment_id: '877856833476004292'
+last_updated_timestamp: 1783347941750
+model_id: m-dbd70770a7d649d4a7460b24c0ccf2dc
+model_type: null
+name: model
+source_run_id: 486e021cd7544c02bdc39f8df7dc1152
+status: 3
+status_message: null

@@ -1,0 +1,11 @@
+{
+  "total_requests": 3,
+  "predict_requests": 1,
+  "health_requests": 1,
+  "root_requests": 1,
+  "average_prediction_time_seconds": 0.038064,
+  "response_status_counts": {
+    "200": 3
+  },
+  "log_file": "C:\\Users\\RA7628\\Downloads\\Bits pilani\\Bits traning session\\Sem-3\\Mlops\\Assignment-1\\Ass1 ans\\heart-disease-mlops-assignment\\artifacts\\monitoring\\api_requests.log"
+}

@@ -1,0 +1,32 @@
+execution_duration_ms: 1321
+request_preview: Great! How do I log a trained model so I can deploy it later?
+request_time: '2026-07-05T19:53:50.856Z'
+response_preview: 'After training, log your model with the appropriate flavor:
+
+
+  ```python
+
+  # For scikit-learn
+
+  mlflow.sklearn.log_model(model, ''model'')
+
+
+  # For PyTorch
+
+  mlflow.pytorch.log_model(model, ''model'')
+
+  ```
+
+
+  The model is saved with your run and can be loaded later with:
+
+  `mlflow.sklearn.load_model(''runs:/<run_id>/model'')`
+
+
+  Ready to register it for deployment?'
+state: OK
+trace_id: tr-9f5793a0037cf06eced52a0c7235a03e
+trace_location:
+  mlflow_experiment:
+    experiment_id: '387372375296911559'
+  type: MLFLOW_EXPERIMENT

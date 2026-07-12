@@ -1,0 +1,42 @@
+{
+  "model_name": "heart_disease_classifier",
+  "model_file": "final_heart_disease_model.joblib",
+  "source_model_file": "tuned_best_model.joblib",
+  "target_column": "target",
+  "dropped_columns": [
+    "num"
+  ],
+  "feature_columns": [
+    "age",
+    "sex",
+    "cp",
+    "trestbps",
+    "chol",
+    "fbs",
+    "restecg",
+    "thalach",
+    "exang",
+    "oldpeak",
+    "slope",
+    "ca",
+    "thal"
+  ],
+  "classifier_type": "LogisticRegression",
+  "classifier_parameters": {
+    "C": 0.1,
+    "class_weight": null,
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": 0.0,
+    "max_iter": 2000,
+    "n_jobs": null,
+    "penalty": "deprecated",
+    "random_state": 42,
+    "solver": "liblinear",
+    "tol": 0.0001,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "packaging_note": "The preprocessing pipeline is stored inside the saved model object."
+}

@@ -1,0 +1,11 @@
+execution_duration_ms: 1809
+request_preview: I think it's a retrieval issue - sometimes it finds irrelevant documents.
+request_time: '2026-07-02T18:20:50.103Z'
+response_preview: You should look at the retrieval scores and maybe adjust your embedding
+  model or chunk size.
+state: OK
+trace_id: tr-57cf72ce45b89f5b52171c0230beea4d
+trace_location:
+  mlflow_experiment:
+    experiment_id: '387372375296911559'
+  type: MLFLOW_EXPERIMENT

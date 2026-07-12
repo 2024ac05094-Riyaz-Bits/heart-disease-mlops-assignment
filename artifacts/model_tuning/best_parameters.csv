@@ -1,0 +1,3 @@
+model,classifier__C,classifier__solver,classifier__max_depth,classifier__min_samples_split,classifier__n_estimators
+logistic_regression_tuned,0.1,liblinear,,,
+random_forest_tuned,,,10.0,5.0,200.0

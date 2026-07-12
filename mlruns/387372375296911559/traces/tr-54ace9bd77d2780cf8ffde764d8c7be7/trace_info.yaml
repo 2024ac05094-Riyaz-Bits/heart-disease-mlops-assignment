@@ -1,0 +1,12 @@
+execution_duration_ms: 601
+request_preview: My RAG application is giving inconsistent answers. How can I debug
+  it?
+request_time: '2026-07-03T00:21:50.102Z'
+response_preview: You should look at your prompts and retrieved documents to see what's
+  happening. MLflow has some tools for this.
+state: OK
+trace_id: tr-54ace9bd77d2780cf8ffde764d8c7be7
+trace_location:
+  mlflow_experiment:
+    experiment_id: '387372375296911559'
+  type: MLFLOW_EXPERIMENT

@@ -1,0 +1,23 @@
+artifact_path: file:///C:/Users/RA7628/Downloads/Bits%20pilani/Bits%20traning%20session/Sem-3/Mlops/Assignment-1/Ass1%20ans/heart-disease-mlops-assignment/mlruns/877856833476004292/models/m-25f70bc29a7c467aa5a1d50332ab1b8a/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.14.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: pickle
+    sklearn_version: 1.9.0
+    skops_trusted_types: null
+mlflow_version: 3.14.0
+model_id: m-25f70bc29a7c467aa5a1d50332ab1b8a
+model_size_bytes: 1122603
+model_uuid: m-25f70bc29a7c467aa5a1d50332ab1b8a
+prompts: null
+run_id: a6594ec4e27047869040ea97e8c6a83c
+utc_time_created: '2026-07-12 06:41:21.548768'

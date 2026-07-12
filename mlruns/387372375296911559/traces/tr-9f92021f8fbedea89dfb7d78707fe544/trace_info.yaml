@@ -1,0 +1,12 @@
+execution_duration_ms: 1529
+request_preview: How do I use mlflow.evaluate() to assess my LLM's output quality?
+request_time: '2026-07-03T21:36:50.112Z'
+response_preview: Use mlflow.evaluate() by passing your model/data and a list of scorers
+  like relevance() or faithfulness(). It returns per-row scores and aggregate metrics,
+  all automatically logged to your MLflow experiment for easy comparison.
+state: OK
+trace_id: tr-9f92021f8fbedea89dfb7d78707fe544
+trace_location:
+  mlflow_experiment:
+    experiment_id: '387372375296911559'
+  type: MLFLOW_EXPERIMENT

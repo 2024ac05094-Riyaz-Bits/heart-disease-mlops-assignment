@@ -1,0 +1,10 @@
+artifact_location: file:C:/Users/RA7628/Downloads/Bits pilani/Bits traning session/Sem-3/Mlops/Assignment-1/Ass1
+  ans/heart-disease-mlops-assignment/mlruns/387372375296911559
+creation_time: 1783348483600
+effective_trace_archival_retention: null
+experiment_id: '387372375296911559'
+last_update_time: 1783348483600
+lifecycle_stage: active
+name: MLflow Demo
+trace_location: null
+workspace: default
